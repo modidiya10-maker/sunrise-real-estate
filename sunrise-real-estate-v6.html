@@ -1,0 +1,1797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sunrise Real Estate – Vadodara</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root{
+  --sun:#F5A623;
+  --gold:#E8C84A;
+  --sky:#5BBFDE;
+  --sky-light:#D9F0F9;
+  --green:#4CAF50;
+  --cream:#FDFAF4;
+  --white:#FFFFFF;
+  --dark:#1A2332;
+  --mid:#3D5166;
+  --soft:#6B8299;
+  --line:#E2EBF0;
+  --shadow:0 8px 40px rgba(26,35,50,.10);
+  --radius:16px;
+  --r-sm:10px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--dark);overflow-x:hidden;visibility:visible}
+
+/* ─── LOADER ─── */
+#loader{position:fixed;inset:0;background:var(--white);z-index:9999;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;transition:opacity .5s}
+#loader.hide{opacity:0;pointer-events:none}
+.loader-sun{width:60px;height:60px;background:var(--sun);border-radius:50%;animation:pulse-sun 1.2s ease-in-out infinite}
+.loader-text{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--dark);letter-spacing:2px}
+@keyframes pulse-logo{0%,100%{transform:scale(1);}50%{transform:scale(1.08);}}
+
+/* ─── TOPBAR ─── */
+#topbar{background:var(--dark);color:#fff;text-align:center;padding:8px 20px;font-size:.8rem;letter-spacing:.5px}
+#topbar a{color:var(--gold);text-decoration:none}
+
+/* ─── NAV ─── */
+nav{position:sticky;top:0;z-index:900;background:rgba(255,255,255,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:12px 40px;gap:20px;transition:box-shadow .3s}
+nav.scrolled{box-shadow:var(--shadow)}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nav-logo img{width:58px;height:58px;border-radius:0;object-fit:contain;border:none}
+.nav-logo-text{line-height:1.2}
+.nav-logo-text .n1{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:900;color:var(--sun);letter-spacing:1px}
+.nav-logo-text .n2{font-size:.7rem;color:var(--soft);letter-spacing:2px;text-transform:uppercase}
+.nav-links{display:flex;gap:6px;align-items:center}
+.nav-links a{text-decoration:none;color:var(--mid);font-size:.88rem;font-weight:500;padding:8px 14px;border-radius:8px;transition:all .2s}
+.nav-links a:hover,.nav-links a.active{background:var(--sky-light);color:var(--sky)}
+.nav-actions{display:flex;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 22px;border-radius:10px;font-family:'DM Sans',sans-serif;font-weight:600;font-size:.88rem;border:none;cursor:pointer;transition:all .25s;text-decoration:none}
+.btn-outline{border:2px solid var(--sky);color:var(--sky);background:transparent}
+.btn-outline:hover{background:var(--sky);color:#fff}
+.btn-sun{background:var(--sun);color:#fff}
+.btn-sun:hover{background:#d4891a;transform:translateY(-1px);box-shadow:0 6px 20px rgba(245,166,35,.35)}
+.btn-dark{background:var(--dark);color:#fff}
+.btn-dark:hover{background:var(--mid)}
+
+/* ─── HERO ─── */
+#hero{min-height:92vh;display:flex;align-items:center;justify-content:space-between;gap:60px;position:relative;overflow:hidden;padding:80px 60px}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#FDFAF4 0%,#E8F5FD 50%,#FFF8EC 100%);z-index:0}
+.hero-circle{position:absolute;width:700px;height:700px;right:-180px;top:-180px;background:radial-gradient(circle,rgba(245,166,35,.12) 0%,transparent 70%);border-radius:50%}
+.hero-circle2{position:absolute;width:400px;height:400px;left:-100px;bottom:-100px;background:radial-gradient(circle,rgba(91,191,222,.1) 0%,transparent 70%);border-radius:50%}
+.hero-content{position:relative;z-index:1;flex:1;min-width:0;max-width:640px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,166,35,.12);border:1px solid rgba(245,166,35,.3);color:var(--sun);padding:6px 16px;border-radius:100px;font-size:.8rem;font-weight:600;letter-spacing:.5px;margin-bottom:24px;animation:fadeUp .6s both}
+.hero-badge i{font-size:.7rem}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.4rem);line-height:1.12;color:var(--dark);margin-bottom:20px;animation:fadeUp .6s .1s both}
+.hero-title span{color:var(--sun)}
+.hero-sub{font-size:1rem;color:var(--soft);line-height:1.75;margin-bottom:36px;animation:fadeUp .6s .2s both}
+.hero-search{background:#fff;border-radius:20px;box-shadow:0 12px 50px rgba(26,35,50,.12);padding:24px;animation:fadeUp .6s .3s both}
+.search-tabs{display:flex;gap:4px;margin-bottom:16px}
+.stab{padding:8px 18px;border-radius:8px;font-size:.85rem;font-weight:600;cursor:pointer;border:none;background:transparent;color:var(--soft);transition:all .2s}
+.stab.active{background:var(--sun);color:#fff}
+.search-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:end}
+.search-row-bottom{display:grid;grid-template-columns:1fr 1fr auto;gap:12px;align-items:end;margin-top:12px}
+.sf{display:flex;flex-direction:column;gap:6px}
+.sf label{font-size:.75rem;font-weight:600;color:var(--soft);text-transform:uppercase;letter-spacing:.5px}
+.sf select,.sf input{padding:11px 14px;border:2px solid var(--line);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:.88rem;color:var(--dark);background:#fff;transition:border .2s;appearance:none}
+.sf select:focus,.sf input:focus{border-color:var(--sky);outline:none}
+.hero-right{position:relative;z-index:1;flex-shrink:0;animation:fadeRight .8s .2s both}
+.hero-img-wrap{position:relative;width:420px}
+.hero-img-card{background:#fff;border-radius:24px;box-shadow:0 20px 80px rgba(26,35,50,.15);overflow:hidden}
+.hero-img-card img{width:100%;height:300px;object-fit:cover}
+.hero-stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}
+.hstat{background:#fff;padding:16px;text-align:center}
+.hstat .num{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--sun)}
+.hstat .lbl{font-size:.72rem;color:var(--soft);margin-top:2px}
+.float-badge{position:absolute;top:-16px;right:-16px;background:var(--sky);color:#fff;padding:12px 18px;border-radius:14px;box-shadow:0 8px 30px rgba(91,191,222,.35);font-weight:700;font-size:.9rem}
+.float-badge small{display:block;font-size:.7rem;opacity:.85;font-weight:400}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeRight{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}}
+@media(max-width:1024px){
+  #hero{flex-direction:column;padding:60px 30px;text-align:center;gap:40px}
+  .hero-content{max-width:100%}
+  .hero-img-wrap{width:100%;max-width:480px}
+  .search-row{grid-template-columns:1fr 1fr}
+  .search-row-bottom{grid-template-columns:1fr 1fr auto}
+  .float-badge{top:-12px;right:0}
+}
+@media(max-width:600px){
+  #hero{padding:40px 20px}
+  .search-row{grid-template-columns:1fr}
+  .search-row-bottom{grid-template-columns:1fr;gap:10px}
+  .hero-img-wrap{width:100%}
+}
+
+/* ─── SECTIONS ─── */
+section{padding:80px 40px}
+.section-label{display:inline-block;background:rgba(245,166,35,.1);color:var(--sun);font-size:.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 16px;border-radius:100px;margin-bottom:14px}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);color:var(--dark);line-height:1.2;margin-bottom:12px}
+.section-sub{color:var(--soft);font-size:1rem;line-height:1.6;max-width:560px}
+.flex-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:48px;flex-wrap:wrap;gap:20px}
+
+/* ─── PROPERTY GRID ─── */
+.prop-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:28px}
+.prop-card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 4px 20px rgba(26,35,50,.07);transition:all .3s;cursor:pointer;position:relative}
+.prop-card:hover{transform:translateY(-6px);box-shadow:0 16px 50px rgba(26,35,50,.14)}
+.prop-img{position:relative;height:200px;overflow:hidden;background:#E2EBF0}
+.prop-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.prop-card:hover .prop-img img{transform:scale(1.06)}
+.prop-badge{position:absolute;top:14px;left:14px;background:var(--sun);color:#fff;font-size:.72rem;font-weight:700;padding:5px 12px;border-radius:100px;letter-spacing:.5px}
+.prop-badge.rent{background:var(--sky)}
+.prop-fav{position:absolute;top:14px;right:14px;width:34px;height:34px;background:rgba(255,255,255,.9);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s}
+.prop-fav:hover{background:#fff;color:red}
+.prop-body{padding:20px}
+.prop-price{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--sun);margin-bottom:6px}
+.prop-name{font-size:1rem;font-weight:600;color:var(--dark);margin-bottom:6px}
+.prop-loc{font-size:.82rem;color:var(--soft);display:flex;align-items:center;gap:5px;margin-bottom:14px}
+.prop-feats{display:flex;gap:14px;border-top:1px solid var(--line);padding-top:14px}
+.pfeat{display:flex;align-items:center;gap:5px;font-size:.8rem;color:var(--soft)}
+.pfeat i{color:var(--sky);font-size:.85rem}
+.prop-actions{display:flex;gap:8px;margin-top:14px}
+.prop-actions .btn{flex:1;justify-content:center;font-size:.8rem;padding:9px 12px}
+
+/* ─── FEATURED HERO PROP ─── */
+.featured-wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.feat-img{border-radius:24px;overflow:hidden;height:440px}
+.feat-img img{width:100%;height:100%;object-fit:cover}
+.feat-chips{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
+.chip{background:var(--sky-light);color:var(--mid);font-size:.8rem;font-weight:600;padding:6px 14px;border-radius:100px}
+.feat-price{font-family:'Playfair Display',serif;font-size:2.2rem;color:var(--sun);margin-bottom:8px}
+.feat-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:24px 0}
+.fmeta{background:var(--cream);padding:14px;border-radius:12px;text-align:center}
+.fmeta .val{font-size:1.1rem;font-weight:700;color:var(--dark)}
+.fmeta .key{font-size:.72rem;color:var(--soft);margin-top:3px}
+
+/* ─── WHY US ─── */
+#why{background:linear-gradient(135deg,#0F1D2E 0%,#1A3352 100%);color:#fff}
+#why .section-title{color:#fff}
+#why .section-sub{color:rgba(255,255,255,.6)}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:24px;margin-top:48px}
+.why-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:30px;text-align:center;transition:all .3s}
+.why-card:hover{background:rgba(255,255,255,.1);transform:translateY(-4px)}
+.why-icon{width:60px;height:60px;border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:1.5rem}
+.why-icon.sun{background:rgba(245,166,35,.2);color:var(--gold)}
+.why-icon.sky{background:rgba(91,191,222,.2);color:var(--sky)}
+.why-icon.green{background:rgba(76,175,80,.2);color:#6FCF3D}
+.why-icon.warm{background:rgba(232,200,74,.2);color:var(--gold)}
+.why-card h3{font-size:1rem;font-weight:700;margin-bottom:8px;color:#fff}
+.why-card p{font-size:.83rem;color:rgba(255,255,255,.55);line-height:1.6}
+
+/* ─── CONTACT ─── */
+#contact{background:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.contact-info{display:flex;flex-direction:column;gap:24px}
+.cinfo{display:flex;gap:16px;align-items:flex-start}
+.cinfo-icon{width:46px;height:46px;border-radius:12px;background:var(--sky-light);color:var(--sky);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem}
+.cinfo-text h4{font-size:.9rem;font-weight:700;color:var(--dark);margin-bottom:4px}
+.cinfo-text p,.cinfo-text a{font-size:.85rem;color:var(--soft);line-height:1.5;text-decoration:none}
+.cinfo-text a:hover{color:var(--sky)}
+.contact-form{background:var(--cream);border-radius:24px;padding:32px}
+.form-title{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--dark);margin-bottom:24px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group{display:flex;flex-direction:column;gap:8px}
+.form-group.full{grid-column:1/-1}
+.form-group label{font-size:.78rem;font-weight:600;color:var(--mid);text-transform:uppercase;letter-spacing:.5px}
+.form-group input,.form-group select,.form-group textarea{padding:12px 16px;border:2px solid var(--line);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:.9rem;background:#fff;color:var(--dark);transition:border .2s;resize:vertical}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--sky);outline:none}
+.form-group textarea{min-height:110px}
+
+/* ─── MAP ─── */
+#map-section{padding:0}
+.map-wrap{height:420px;position:relative}
+.map-wrap iframe{width:100%;height:100%;border:0;display:block}
+.map-overlay{position:absolute;top:20px;left:20px;background:#fff;padding:16px 20px;border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,.15);max-width:280px;z-index:1}
+.map-overlay h3{font-family:'Playfair Display',serif;font-size:1rem;color:var(--dark);margin-bottom:6px}
+.map-overlay p{font-size:.8rem;color:var(--soft);line-height:1.5}
+
+/* ─── OWNER PANEL ─── */
+#owner-panel{display:none;position:fixed;inset:0;background:rgba(26,35,50,.6);backdrop-filter:blur(8px);z-index:9000;align-items:center;justify-content:center;padding:20px}
+#owner-panel.open{display:flex}
+.owner-modal{background:#fff;border-radius:28px;width:100%;max-width:920px;max-height:90vh;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 30px 100px rgba(0,0,0,.25)}
+.owner-header{background:linear-gradient(135deg,var(--dark),var(--mid));padding:24px 32px;display:flex;align-items:center;justify-content:space-between;color:#fff;flex-shrink:0}
+.owner-header h2{font-family:'Playfair Display',serif;font-size:1.4rem}
+.owner-header p{font-size:.82rem;opacity:.7;margin-top:3px}
+.owner-close{width:36px;height:36px;background:rgba(255,255,255,.15);border:none;border-radius:50%;color:#fff;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:.2s}
+.owner-close:hover{background:rgba(255,255,255,.3)}
+.owner-body{overflow-y:auto;flex:1}
+#login-form{padding:40px;max-width:400px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+#login-form .lf-logo{text-align:center;margin-bottom:12px}
+#login-form .lf-logo img{width:70px;height:70px;border-radius:50%;border:3px solid var(--gold)}
+#login-form h3{font-family:'Playfair Display',serif;font-size:1.5rem;text-align:center;color:var(--dark)}
+#login-form p{text-align:center;color:var(--soft);font-size:.85rem}
+.login-err{background:#FEE8E8;color:#C0392B;padding:12px 16px;border-radius:10px;font-size:.85rem;display:none}
+#dashboard{display:none;flex-direction:column}
+.dash-nav{background:var(--cream);border-bottom:1px solid var(--line);padding:16px 32px;display:flex;gap:8px}
+.dash-tab{padding:9px 18px;border-radius:8px;font-size:.85rem;font-weight:600;cursor:pointer;border:none;background:transparent;color:var(--soft);transition:.2s}
+.dash-tab.active{background:var(--dark);color:#fff}
+.dash-content{padding:32px;flex:1}
+.dash-section{display:none}
+.dash-section.active{display:block}
+.dash-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;margin-bottom:30px}
+.stat-card{background:var(--cream);border-radius:16px;padding:20px;border-left:4px solid var(--sun)}
+.stat-card.sky{border-left-color:var(--sky)}
+.stat-card.green{border-left-color:var(--green)}
+.stat-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--dark)}
+.stat-lbl{font-size:.82rem;color:var(--soft);margin-top:4px}
+.dash-title{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--dark);margin-bottom:20px}
+.prop-mgmt-list{display:flex;flex-direction:column;gap:14px}
+.pmgmt-row{background:var(--cream);border-radius:14px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.pmgmt-info h4{font-size:.9rem;font-weight:700;color:var(--dark)}
+.pmgmt-info p{font-size:.8rem;color:var(--soft);margin-top:3px}
+.pmgmt-price{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--sun)}
+.pmgmt-actions{display:flex;gap:8px}
+.ibtn{padding:8px 14px;border-radius:8px;font-size:.78rem;font-weight:600;border:none;cursor:pointer;transition:.2s}
+.ibtn-edit{background:var(--sky-light);color:var(--sky)}
+.ibtn-edit:hover{background:var(--sky);color:#fff}
+.ibtn-del{background:#FDEDED;color:#E74C3C}
+.ibtn-del:hover{background:#E74C3C;color:#fff}
+/* Edit modal inner */
+.edit-form-wrap{background:#fff;border-radius:16px;padding:24px;margin-top:20px;border:2px solid var(--line)}
+.edit-form-wrap .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.add-prop-btn{margin-bottom:20px}
+.upload-area{border:2px dashed var(--line);border-radius:12px;padding:30px;text-align:center;cursor:pointer;transition:.2s;position:relative;overflow:hidden}
+.upload-area:hover{border-color:var(--sky);background:var(--sky-light)}
+.upload-area input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer}
+.upload-area i{font-size:2rem;color:var(--soft);margin-bottom:10px}
+.upload-area p{font-size:.85rem;color:var(--soft)}
+.img-preview-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:10px;margin-top:16px}
+.img-preview-grid img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px}
+/* Toast */
+.toast{position:fixed;bottom:30px;right:30px;background:var(--dark);color:#fff;padding:14px 24px;border-radius:12px;font-size:.88rem;font-weight:500;z-index:9999;transform:translateY(80px);opacity:0;transition:.4s;pointer-events:none;display:flex;align-items:center;gap:10px}
+.toast.show{transform:translateY(0);opacity:1}
+.toast.success{background:#27AE60}
+.toast.error{background:#E74C3C}
+
+/* ─── FOOTER ─── */
+footer{background:var(--dark);color:rgba(255,255,255,.7);padding:60px 40px 30px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:40px}
+.footer-brand .n1{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--gold);letter-spacing:1px}
+.footer-brand .n2{font-size:.75rem;letter-spacing:2px;text-transform:uppercase;opacity:.5;margin-bottom:14px}
+.footer-brand p{font-size:.85rem;line-height:1.7;opacity:.6}
+.footer-col h4{font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#fff;margin-bottom:16px}
+.footer-col a{display:block;font-size:.85rem;color:rgba(255,255,255,.5);text-decoration:none;margin-bottom:9px;transition:.2s}
+.footer-col a:hover{color:var(--gold)}
+.footer-socials{display:flex;gap:10px;margin-top:16px}
+.fsoc{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.08);color:rgba(255,255,255,.6);display:flex;align-items:center;justify-content:center;text-decoration:none;transition:.2s}
+.fsoc:hover{background:var(--sun);color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;font-size:.8rem;opacity:.4}
+
+.pmod-price{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--sun);margin-bottom:8px}
+/* ─── MISC ─── */
+.tag-new{background:var(--green);color:#fff;font-size:.65rem;font-weight:700;padding:3px 8px;border-radius:100px;vertical-align:middle;margin-left:6px}
+.whatsapp-fab{position:fixed;bottom:90px;right:30px;background:#25D366;color:#fff;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;text-decoration:none;box-shadow:0 6px 24px rgba(37,211,102,.4);z-index:800;transition:.3s;animation:bounce 2s infinite}
+.whatsapp-fab:hover{transform:scale(1.1)}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.back-top{position:fixed;bottom:30px;right:30px;background:var(--dark);color:#fff;width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;cursor:pointer;border:none;font-size:1rem;z-index:800;opacity:0;transition:.3s}
+.back-top.show{opacity:1}
+.back-top:hover{background:var(--sun)}
+
+/* ─── MODAL GALLERY / ENQUIRY ─── */
+#prop-modal{display:none;position:fixed;inset:0;background:rgba(26,35,50,.7);backdrop-filter:blur(8px);z-index:9000;align-items:center;justify-content:center;padding:20px}
+#prop-modal.open{display:flex}
+.pmodal-box{background:#fff;border-radius:28px;width:100%;max-width:840px;max-height:90vh;overflow-y:auto;box-shadow:0 30px 100px rgba(0,0,0,.25)}
+.pmodal-header{display:flex;justify-content:space-between;align-items:center;padding:24px 28px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;z-index:1}
+.pmodal-header h2{font-family:'Playfair Display',serif;font-size:1.3rem}
+.pmodal-body{padding:28px}
+.pmod-gallery{display:grid;grid-template-columns:2fr 1fr;gap:12px;margin-bottom:24px}
+.pmod-gallery .main-img{border-radius:16px;overflow:hidden;height:280px}
+.pmod-gallery .main-img img{width:100%;height:100%;object-fit:cover}
+.pmod-thumbs{display:grid;gap:12px}
+.pmod-thumbs .thumb{border-radius:10px;overflow:hidden;height:132px}
+.pmod-thumbs .thumb img{width:100%;height:100%;object-fit:cover}
+.pmod-details{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px}
+.pmod-left h3{font-family:'Playfair Display',serif;font-size:1.7rem;color:var(--sun);margin-bottom:8px}
+.pmod-feats-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.pmod-feat{background:var(--cream);padding:12px 16px;border-radius:10px;display:flex;align-items:center;gap:10px;font-size:.85rem}
+.pmod-feat i{color:var(--sky);font-size:1rem}
+.pmod-enquiry{background:var(--cream);border-radius:16px;padding:24px}
+.pmod-enquiry h4{font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:16px}
+
+/* Responsive */
+@media(max-width:900px){
+  nav{padding:12px 20px}
+  .nav-links{display:none}
+  #hero{flex-direction:column;padding:40px 20px;min-height:auto;gap:40px}
+  .hero-right{display:none}
+  section{padding:60px 20px}
+  .featured-wrap,.contact-grid,.footer-grid{grid-template-columns:1fr}
+  .search-row{grid-template-columns:1fr 1fr}
+  .form-grid{grid-template-columns:1fr}
+  .pmod-gallery,.pmod-details{grid-template-columns:1fr}
+  .owner-modal{border-radius:16px}
+  .dash-content{padding:20px}
+  footer{padding:40px 20px 20px}
+}
+
+/* ─── PHOTO GALLERY MANAGER ─── */
+.photo-gallery-wrap{margin-top:14px}
+.photo-gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:10px;margin-top:10px}
+.photo-thumb-item{position:relative;border-radius:10px;overflow:hidden;aspect-ratio:1;background:var(--line)}
+.photo-thumb-item img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-thumb-del{position:absolute;top:4px;right:4px;width:22px;height:22px;background:rgba(231,76,60,.9);border:none;border-radius:50%;color:#fff;font-size:.65rem;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1}
+.photo-thumb-main{position:absolute;bottom:4px;left:4px;background:rgba(245,166,35,.9);color:#fff;font-size:.55rem;font-weight:700;padding:2px 5px;border-radius:4px;pointer-events:none}
+.photo-add-btn{border:2px dashed var(--line);border-radius:10px;aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;transition:.2s;position:relative;background:transparent}
+.photo-add-btn:hover{border-color:var(--sky);background:var(--sky-light)}
+.photo-add-btn input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.photo-add-btn i{font-size:1.4rem;color:var(--soft)}
+.photo-add-btn span{font-size:.72rem;color:var(--soft);margin-top:4px}
+
+/* ─── ENQUIRY DASHBOARD ─── */
+.enq-filters{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
+.enq-filter-btn{padding:7px 16px;border-radius:8px;border:2px solid var(--line);background:#fff;font-size:.82rem;font-weight:600;color:var(--soft);cursor:pointer;transition:.2s}
+.enq-filter-btn.active{border-color:var(--sun);background:rgba(245,166,35,.08);color:var(--sun)}
+.enq-card{background:#fff;border-radius:16px;border:1px solid var(--line);overflow:hidden;margin-bottom:14px;transition:.2s}
+.enq-card:hover{box-shadow:0 4px 20px rgba(26,35,50,.08)}
+.enq-card-header{padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;cursor:pointer}
+.enq-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--sun),var(--sky));color:#fff;font-weight:700;font-size:1rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.enq-info{flex:1}
+.enq-info h4{font-size:.92rem;font-weight:700;color:var(--dark);margin-bottom:2px}
+.enq-info p{font-size:.8rem;color:var(--soft)}
+.enq-badge{padding:4px 12px;border-radius:100px;font-size:.72rem;font-weight:700}
+.enq-badge.new{background:rgba(245,166,35,.15);color:var(--sun)}
+.enq-badge.read{background:var(--line);color:var(--soft)}
+.enq-time{font-size:.75rem;color:var(--soft);white-space:nowrap}
+.enq-card-body{padding:0 20px 16px;border-top:1px solid var(--line);display:none}
+.enq-card-body.open{display:block;padding-top:14px}
+.enq-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.enq-detail-item{background:var(--cream);padding:10px 14px;border-radius:10px}
+.enq-detail-item label{font-size:.7rem;text-transform:uppercase;letter-spacing:.5px;color:var(--soft);font-weight:700;display:block;margin-bottom:3px}
+.enq-detail-item span{font-size:.88rem;color:var(--dark);font-weight:500}
+.enq-msg{background:var(--cream);padding:12px 14px;border-radius:10px;font-size:.88rem;color:var(--mid);line-height:1.6}
+.enq-actions-row{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.enq-stat-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:14px;margin-bottom:24px}
+.enq-stat{background:#fff;border-radius:14px;padding:16px;border-left:4px solid var(--sun);text-align:center}
+.enq-stat.sky{border-left-color:var(--sky)}
+.enq-stat.green{border-left-color:var(--green)}
+.enq-stat .es-num{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:var(--dark)}
+.enq-stat .es-lbl{font-size:.75rem;color:var(--soft);margin-top:3px}
+.enq-empty{text-align:center;padding:50px 20px;color:var(--soft)}
+.enq-empty i{font-size:3rem;opacity:.3;display:block;margin-bottom:12px}
+.enq-search-bar{position:relative;margin-bottom:16px}
+.enq-search-bar input{width:100%;padding:11px 16px 11px 40px;border:2px solid var(--line);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:.88rem;transition:.2s}
+.enq-search-bar input:focus{border-color:var(--sky);outline:none}
+.enq-search-bar i{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--soft)}
+
+/* ─── FULL MODAL GALLERY ─── */
+.pmod-gallery-wrap{margin-bottom:20px}
+.pmod-main-photo{border-radius:16px;overflow:hidden;height:280px;margin-bottom:10px}
+.pmod-main-photo img{width:100%;height:100%;object-fit:cover}
+.pmod-main-photo{
+  position:relative;
+}
+
+.pmod-nav{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:42px;
+  height:42px;
+  border:none;
+  border-radius:50%;
+  cursor:pointer;
+  z-index:10;
+
+  background:rgba(0,0,0,.55);
+  color:#fff;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.pmod-nav.prev{
+  left:12px;
+}
+
+.pmod-nav.next{
+  right:12px;
+}
+
+.pmod-nav:hover{
+  background:rgba(0,0,0,.75);
+}
+.pmod-thumb-strip{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px}
+.pmod-thumb-strip::-webkit-scrollbar{height:4px}
+.pmod-thumb-strip::-webkit-scrollbar-track{background:var(--line)}
+.pmod-thumb-strip::-webkit-scrollbar-thumb{background:var(--sky);border-radius:2px}
+.pmod-strip-thumb{flex-shrink:0;width:70px;height:55px;border-radius:8px;overflow:hidden;cursor:pointer;border:2px solid transparent;transition:.2s}
+.pmod-strip-thumb.active,.pmod-strip-thumb:hover{border-color:var(--sun)}
+.pmod-strip-thumb img{width:100%;height:100%;object-fit:cover}
+
+
+/* Availability date reveal */
+.avail-date-row{display:none}
+.avail-date-row.show{display:flex}
+/* Badge for availability on cards */
+.avail-badge{display:inline-block;font-size:.68rem;font-weight:700;padding:3px 9px;border-radius:100px;margin-top:4px}
+.avail-badge.available{background:rgba(76,175,80,.15);color:#2E7D32}
+.avail-badge.sold{background:rgba(231,76,60,.12);color:#C0392B}
+.avail-badge.rent-out{background:rgba(91,191,222,.15);color:#1A7FA8}
+.avail-badge.not-available{background:var(--line);color:var(--soft)}
+.avail-badge.available-in{background:rgba(245,166,35,.15);color:#B7710A}
+/* Furniture badge */
+.furn-badge{display:inline-block;font-size:.68rem;font-weight:600;padding:3px 9px;border-radius:100px;background:rgba(61,81,102,.1);color:var(--mid);margin-left:4px}
+/* Card meta tags row */
+.prop-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px}
+.prop-tag{font-size:.67rem;font-weight:700;padding:3px 9px;border-radius:100px;background:var(--sky-light);color:var(--mid)}
+
+</style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%22100%22%20fill%3D%22%23FDFAF4%22%2F%3E%0A%20%20%3Cg%20transform%3D%22translate%28100%2C72%29%22%20stroke%3D%22%23F5A623%22%20stroke-linecap%3D%22round%22%3E%0A%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%22-38%22%20x2%3D%220%22%20y2%3D%22-54%22%20stroke-width%3D%222.8%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%2213%22%20y1%3D%22-35%22%20x2%3D%2219.5%22%20y2%3D%22-50%22%20stroke-width%3D%222.8%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%2224%22%20y1%3D%22-27%22%20x2%3D%2234%22%20y2%3D%22-38%22%20stroke-width%3D%222.8%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%2230%22%20y1%3D%22-14%22%20x2%3D%2243%22%20y2%3D%22-19%22%20stroke-width%3D%222.8%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%22-13%22%20y1%3D%22-35%22%20x2%3D%22-19.5%22%20y2%3D%22-50%22%20stroke-width%3D%222.8%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%22-24%22%20y1%3D%22-27%22%20x2%3D%22-34%22%20y2%3D%22-38%22%20stroke-width%3D%222.8%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%22-30%22%20y1%3D%22-14%22%20x2%3D%22-43%22%20y2%3D%22-19%22%20stroke-width%3D%222.8%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%227%22%20y1%3D%22-37%22%20x2%3D%2210%22%20y2%3D%22-52%22%20stroke-width%3D%221.3%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%22-7%22%20y1%3D%22-37%22%20x2%3D%22-10%22%20y2%3D%22-52%22%20stroke-width%3D%221.3%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%2219%22%20y1%3D%22-32%22%20x2%3D%2227%22%20y2%3D%22-45%22%20stroke-width%3D%221.3%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%22-19%22%20y1%3D%22-32%22%20x2%3D%22-27%22%20y2%3D%22-45%22%20stroke-width%3D%221.3%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%2228%22%20y1%3D%22-21%22%20x2%3D%2239%22%20y2%3D%22-28%22%20stroke-width%3D%221.3%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%22-28%22%20y1%3D%22-21%22%20x2%3D%22-39%22%20y2%3D%22-28%22%20stroke-width%3D%221.3%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%2232%22%20y1%3D%22-7%22%20x2%3D%2246%22%20y2%3D%22-10%22%20stroke-width%3D%221.3%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%22-32%22%20y1%3D%22-7%22%20x2%3D%22-46%22%20y2%3D%22-10%22%20stroke-width%3D%221.3%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Ccircle%20cx%3D%22100%22%20cy%3D%2272%22%20r%3D%2230%22%20fill%3D%22%23F5A623%22%2F%3E%0A%20%20%3Cpolygon%20transform%3D%22translate%2864%2C54%29%22%20points%3D%220%2C-5%201.2%2C-1.2%205%2C0%201.2%2C1.2%200%2C5%20-1.2%2C1.2%20-5%2C0%20-1.2%2C-1.2%22%20fill%3D%22%23F5A623%22%20opacity%3D%220.85%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%22100%22%20cy%3D%22140%22%20rx%3D%2258%22%20ry%3D%2213%22%20fill%3D%22%234CAF50%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%22100%22%20cy%3D%22143%22%20rx%3D%2222%22%20ry%3D%226.5%22%20fill%3D%22%2378C8E0%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%22100%22%20cy%3D%22143%22%20rx%3D%2216%22%20ry%3D%224.5%22%20fill%3D%22none%22%20stroke%3D%22%235BBFDE%22%20stroke-width%3D%220.8%22%20opacity%3D%220.6%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%22100%22%20cy%3D%22143%22%20rx%3D%2210%22%20ry%3D%222.8%22%20fill%3D%22none%22%20stroke%3D%22%235BBFDE%22%20stroke-width%3D%220.8%22%20opacity%3D%220.4%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%2274%22%20cy%3D%22134%22%20rx%3D%229%22%20ry%3D%227%22%20fill%3D%22%23388E3C%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%2269%22%20cy%3D%22136%22%20rx%3D%227%22%20ry%3D%225%22%20fill%3D%22%2343A047%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%22126%22%20cy%3D%22134%22%20rx%3D%229%22%20ry%3D%227%22%20fill%3D%22%23388E3C%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%22131%22%20cy%3D%22136%22%20rx%3D%227%22%20ry%3D%225%22%20fill%3D%22%2343A047%22%2F%3E%0A%20%20%3Crect%20x%3D%2260%22%20y%3D%22109%22%20width%3D%223%22%20height%3D%2227%22%20rx%3D%221.5%22%20fill%3D%22%235D4037%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M61.5%2C109%20Q50%2C99%2042%2C93%22%20stroke%3D%22%2333691E%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M61.5%2C109%20Q55%2C97%2052%2C89%22%20stroke%3D%22%23388E3C%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M61.5%2C109%20Q62%2C96%2064%2C89%22%20stroke%3D%22%2333691E%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M61.5%2C109%20Q68%2C99%2072%2C94%22%20stroke%3D%22%23388E3C%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M61.5%2C109%20Q66%2C101%2070%2C98%22%20stroke%3D%22%232E7D32%22%20stroke-width%3D%222%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Crect%20x%3D%22137%22%20y%3D%22109%22%20width%3D%223%22%20height%3D%2227%22%20rx%3D%221.5%22%20fill%3D%22%235D4037%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M138.5%2C109%20Q150%2C99%20158%2C93%22%20stroke%3D%22%2333691E%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M138.5%2C109%20Q145%2C97%20148%2C89%22%20stroke%3D%22%23388E3C%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M138.5%2C109%20Q138%2C96%20136%2C89%22%20stroke%3D%22%2333691E%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M138.5%2C109%20Q132%2C99%20128%2C94%22%20stroke%3D%22%23388E3C%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M138.5%2C109%20Q134%2C101%20130%2C98%22%20stroke%3D%22%232E7D32%22%20stroke-width%3D%222%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Crect%20x%3D%2282%22%20y%3D%2248%22%20width%3D%2236%22%20height%3D%2290%22%20rx%3D%222%22%20fill%3D%22%235C6B7A%22%2F%3E%0A%20%20%3Crect%20x%3D%2282%22%20y%3D%2248%22%20width%3D%228%22%20height%3D%2290%22%20rx%3D%222%22%20fill%3D%22%236B7C8C%22%20opacity%3D%220.5%22%2F%3E%0A%20%20%3Cg%20fill%3D%22%23C8D6E0%22%20opacity%3D%220.75%22%3E%0A%20%20%20%20%3Crect%20x%3D%2285%22%20y%3D%2252%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2292%22%20y%3D%2252%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2299%22%20y%3D%2252%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%22106%22%20y%3D%2252%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2285%22%20y%3D%2259%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2292%22%20y%3D%2259%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2299%22%20y%3D%2259%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%22106%22%20y%3D%2259%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2285%22%20y%3D%2266%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2292%22%20y%3D%2266%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2299%22%20y%3D%2266%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%22106%22%20y%3D%2266%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2285%22%20y%3D%2273%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2292%22%20y%3D%2273%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2299%22%20y%3D%2273%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%22106%22%20y%3D%2273%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2285%22%20y%3D%2280%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2292%22%20y%3D%2280%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2299%22%20y%3D%2280%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%22106%22%20y%3D%2280%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2285%22%20y%3D%2287%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2292%22%20y%3D%2287%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2299%22%20y%3D%2287%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%22106%22%20y%3D%2287%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2285%22%20y%3D%2294%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2292%22%20y%3D%2294%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2299%22%20y%3D%2294%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%22106%22%20y%3D%2294%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2285%22%20y%3D%22101%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2292%22%20y%3D%22101%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2299%22%20y%3D%22101%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%22106%22%20y%3D%22101%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Crect%20x%3D%2293%22%20y%3D%22121%22%20width%3D%2214%22%20height%3D%2217%22%20rx%3D%221%22%20fill%3D%22%235BBFDE%22%2F%3E%0A%20%20%3Crect%20x%3D%2295%22%20y%3D%22123%22%20width%3D%225%22%20height%3D%2213%22%20rx%3D%220.5%22%20fill%3D%22%23A8E4F7%22%20opacity%3D%220.7%22%2F%3E%0A%20%20%3Crect%20x%3D%22101%22%20y%3D%22123%22%20width%3D%225%22%20height%3D%2213%22%20rx%3D%220.5%22%20fill%3D%22%23A8E4F7%22%20opacity%3D%220.5%22%2F%3E%0A%20%20%3Crect%20x%3D%2282%22%20y%3D%2248%22%20width%3D%2236%22%20height%3D%224%22%20rx%3D%221%22%20fill%3D%22%234A5A68%22%2F%3E%0A%20%20%3Crect%20x%3D%2258%22%20y%3D%2270%22%20width%3D%2226%22%20height%3D%2268%22%20rx%3D%222%22%20fill%3D%22%236B7C8C%22%2F%3E%0A%20%20%3Crect%20x%3D%2258%22%20y%3D%2270%22%20width%3D%226%22%20height%3D%2268%22%20rx%3D%222%22%20fill%3D%22%237B8E9E%22%20opacity%3D%220.4%22%2F%3E%0A%20%20%3Cg%20fill%3D%22%23C8D6E0%22%20opacity%3D%220.6%22%3E%0A%20%20%20%20%3Crect%20x%3D%2261%22%20y%3D%2274%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2267%22%20y%3D%2274%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2273%22%20y%3D%2274%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2261%22%20y%3D%2280%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2267%22%20y%3D%2280%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2273%22%20y%3D%2280%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2261%22%20y%3D%2286%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2267%22%20y%3D%2286%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2273%22%20y%3D%2286%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2261%22%20y%3D%2292%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2267%22%20y%3D%2292%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2273%22%20y%3D%2292%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2261%22%20y%3D%2298%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2267%22%20y%3D%2298%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2273%22%20y%3D%2298%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2261%22%20y%3D%22104%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2267%22%20y%3D%22104%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2273%22%20y%3D%22104%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2261%22%20y%3D%22110%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2267%22%20y%3D%22110%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2273%22%20y%3D%22110%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Crect%20x%3D%2258%22%20y%3D%2270%22%20width%3D%2226%22%20height%3D%224%22%20rx%3D%221%22%20fill%3D%22%23566474%22%2F%3E%0A%20%20%3Crect%20x%3D%22116%22%20y%3D%2270%22%20width%3D%2226%22%20height%3D%2268%22%20rx%3D%222%22%20fill%3D%22%236B7C8C%22%2F%3E%0A%20%20%3Crect%20x%3D%22116%22%20y%3D%2270%22%20width%3D%226%22%20height%3D%2268%22%20rx%3D%222%22%20fill%3D%22%237B8E9E%22%20opacity%3D%220.4%22%2F%3E%0A%20%20%3Cg%20fill%3D%22%23C8D6E0%22%20opacity%3D%220.6%22%3E%0A%20%20%20%20%3Crect%20x%3D%22119%22%20y%3D%2274%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22125%22%20y%3D%2274%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22131%22%20y%3D%2274%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%22119%22%20y%3D%2280%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22125%22%20y%3D%2280%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22131%22%20y%3D%2280%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%22119%22%20y%3D%2286%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22125%22%20y%3D%2286%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22131%22%20y%3D%2286%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%22119%22%20y%3D%2292%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22125%22%20y%3D%2292%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22131%22%20y%3D%2292%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%22119%22%20y%3D%2298%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22125%22%20y%3D%2298%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22131%22%20y%3D%2298%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%22119%22%20y%3D%22104%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22125%22%20y%3D%22104%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22131%22%20y%3D%22104%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%22119%22%20y%3D%22110%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22125%22%20y%3D%22110%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22131%22%20y%3D%22110%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Crect%20x%3D%22116%22%20y%3D%2270%22%20width%3D%2226%22%20height%3D%224%22%20rx%3D%221%22%20fill%3D%22%23566474%22%2F%3E%0A%20%20%3Crect%20x%3D%2228%22%20y%3D%22150%22%20width%3D%22144%22%20height%3D%2222%22%20rx%3D%223%22%20fill%3D%22%235BBFDE%22%2F%3E%0A%20%20%3Cpolygon%20points%3D%2228%2C150%2028%2C172%2020%2C161%22%20fill%3D%22%233A9AB8%22%2F%3E%0A%20%20%3Cpolygon%20points%3D%22172%2C150%20172%2C172%20180%2C161%22%20fill%3D%22%233A9AB8%22%2F%3E%0A%20%20%3Ctext%20x%3D%22100%22%20y%3D%22165.5%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%20Black%2CImpact%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2217%22%20fill%3D%22%23E8C84A%22%20letter-spacing%3D%222%22%3ESUNRISE%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22100%22%20y%3D%22187%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210%22%20fill%3D%22%231A2332%22%20letter-spacing%3D%223.5%22%3EREAL%20ESTATE%3C%2Ftext%3E%0A%3C%2Fsvg%3E" style="width:80px;height:80px;animation:pulse-logo 1.2s ease-in-out infinite" alt="Sunrise Logo">
+  <div class="loader-text">SUNRISE REAL ESTATE</div>
+</div>
+
+<!-- TOPBAR -->
+<div id="topbar">
+  📞 &nbsp;+91 9925326900 &nbsp;|&nbsp; 📧 <a href="mailto:sunrise.realstate.vadodara@gmail.com">sunrise.realstate.vadodara@gmail.com</a> &nbsp;|&nbsp; 📍 GF-18 Amrapali Complex, Karelibagh, Vadodara
+</div>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a class="nav-logo" href="#">
+    <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%22100%22%20fill%3D%22%23FDFAF4%22%2F%3E%0A%20%20%3Cg%20transform%3D%22translate%28100%2C72%29%22%20stroke%3D%22%23F5A623%22%20stroke-linecap%3D%22round%22%3E%0A%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%22-38%22%20x2%3D%220%22%20y2%3D%22-54%22%20stroke-width%3D%222.8%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%2213%22%20y1%3D%22-35%22%20x2%3D%2219.5%22%20y2%3D%22-50%22%20stroke-width%3D%222.8%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%2224%22%20y1%3D%22-27%22%20x2%3D%2234%22%20y2%3D%22-38%22%20stroke-width%3D%222.8%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%2230%22%20y1%3D%22-14%22%20x2%3D%2243%22%20y2%3D%22-19%22%20stroke-width%3D%222.8%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%22-13%22%20y1%3D%22-35%22%20x2%3D%22-19.5%22%20y2%3D%22-50%22%20stroke-width%3D%222.8%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%22-24%22%20y1%3D%22-27%22%20x2%3D%22-34%22%20y2%3D%22-38%22%20stroke-width%3D%222.8%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%22-30%22%20y1%3D%22-14%22%20x2%3D%22-43%22%20y2%3D%22-19%22%20stroke-width%3D%222.8%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%227%22%20y1%3D%22-37%22%20x2%3D%2210%22%20y2%3D%22-52%22%20stroke-width%3D%221.3%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%22-7%22%20y1%3D%22-37%22%20x2%3D%22-10%22%20y2%3D%22-52%22%20stroke-width%3D%221.3%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%2219%22%20y1%3D%22-32%22%20x2%3D%2227%22%20y2%3D%22-45%22%20stroke-width%3D%221.3%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%22-19%22%20y1%3D%22-32%22%20x2%3D%22-27%22%20y2%3D%22-45%22%20stroke-width%3D%221.3%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%2228%22%20y1%3D%22-21%22%20x2%3D%2239%22%20y2%3D%22-28%22%20stroke-width%3D%221.3%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%22-28%22%20y1%3D%22-21%22%20x2%3D%22-39%22%20y2%3D%22-28%22%20stroke-width%3D%221.3%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%2232%22%20y1%3D%22-7%22%20x2%3D%2246%22%20y2%3D%22-10%22%20stroke-width%3D%221.3%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%22-32%22%20y1%3D%22-7%22%20x2%3D%22-46%22%20y2%3D%22-10%22%20stroke-width%3D%221.3%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Ccircle%20cx%3D%22100%22%20cy%3D%2272%22%20r%3D%2230%22%20fill%3D%22%23F5A623%22%2F%3E%0A%20%20%3Cpolygon%20transform%3D%22translate%2864%2C54%29%22%20points%3D%220%2C-5%201.2%2C-1.2%205%2C0%201.2%2C1.2%200%2C5%20-1.2%2C1.2%20-5%2C0%20-1.2%2C-1.2%22%20fill%3D%22%23F5A623%22%20opacity%3D%220.85%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%22100%22%20cy%3D%22140%22%20rx%3D%2258%22%20ry%3D%2213%22%20fill%3D%22%234CAF50%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%22100%22%20cy%3D%22143%22%20rx%3D%2222%22%20ry%3D%226.5%22%20fill%3D%22%2378C8E0%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%22100%22%20cy%3D%22143%22%20rx%3D%2216%22%20ry%3D%224.5%22%20fill%3D%22none%22%20stroke%3D%22%235BBFDE%22%20stroke-width%3D%220.8%22%20opacity%3D%220.6%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%22100%22%20cy%3D%22143%22%20rx%3D%2210%22%20ry%3D%222.8%22%20fill%3D%22none%22%20stroke%3D%22%235BBFDE%22%20stroke-width%3D%220.8%22%20opacity%3D%220.4%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%2274%22%20cy%3D%22134%22%20rx%3D%229%22%20ry%3D%227%22%20fill%3D%22%23388E3C%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%2269%22%20cy%3D%22136%22%20rx%3D%227%22%20ry%3D%225%22%20fill%3D%22%2343A047%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%22126%22%20cy%3D%22134%22%20rx%3D%229%22%20ry%3D%227%22%20fill%3D%22%23388E3C%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%22131%22%20cy%3D%22136%22%20rx%3D%227%22%20ry%3D%225%22%20fill%3D%22%2343A047%22%2F%3E%0A%20%20%3Crect%20x%3D%2260%22%20y%3D%22109%22%20width%3D%223%22%20height%3D%2227%22%20rx%3D%221.5%22%20fill%3D%22%235D4037%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M61.5%2C109%20Q50%2C99%2042%2C93%22%20stroke%3D%22%2333691E%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M61.5%2C109%20Q55%2C97%2052%2C89%22%20stroke%3D%22%23388E3C%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M61.5%2C109%20Q62%2C96%2064%2C89%22%20stroke%3D%22%2333691E%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M61.5%2C109%20Q68%2C99%2072%2C94%22%20stroke%3D%22%23388E3C%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M61.5%2C109%20Q66%2C101%2070%2C98%22%20stroke%3D%22%232E7D32%22%20stroke-width%3D%222%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Crect%20x%3D%22137%22%20y%3D%22109%22%20width%3D%223%22%20height%3D%2227%22%20rx%3D%221.5%22%20fill%3D%22%235D4037%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M138.5%2C109%20Q150%2C99%20158%2C93%22%20stroke%3D%22%2333691E%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M138.5%2C109%20Q145%2C97%20148%2C89%22%20stroke%3D%22%23388E3C%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M138.5%2C109%20Q138%2C96%20136%2C89%22%20stroke%3D%22%2333691E%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M138.5%2C109%20Q132%2C99%20128%2C94%22%20stroke%3D%22%23388E3C%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M138.5%2C109%20Q134%2C101%20130%2C98%22%20stroke%3D%22%232E7D32%22%20stroke-width%3D%222%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Crect%20x%3D%2282%22%20y%3D%2248%22%20width%3D%2236%22%20height%3D%2290%22%20rx%3D%222%22%20fill%3D%22%235C6B7A%22%2F%3E%0A%20%20%3Crect%20x%3D%2282%22%20y%3D%2248%22%20width%3D%228%22%20height%3D%2290%22%20rx%3D%222%22%20fill%3D%22%236B7C8C%22%20opacity%3D%220.5%22%2F%3E%0A%20%20%3Cg%20fill%3D%22%23C8D6E0%22%20opacity%3D%220.75%22%3E%0A%20%20%20%20%3Crect%20x%3D%2285%22%20y%3D%2252%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2292%22%20y%3D%2252%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2299%22%20y%3D%2252%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%22106%22%20y%3D%2252%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2285%22%20y%3D%2259%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2292%22%20y%3D%2259%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2299%22%20y%3D%2259%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%22106%22%20y%3D%2259%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2285%22%20y%3D%2266%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2292%22%20y%3D%2266%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2299%22%20y%3D%2266%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%22106%22%20y%3D%2266%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2285%22%20y%3D%2273%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2292%22%20y%3D%2273%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2299%22%20y%3D%2273%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%22106%22%20y%3D%2273%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2285%22%20y%3D%2280%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2292%22%20y%3D%2280%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2299%22%20y%3D%2280%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%22106%22%20y%3D%2280%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2285%22%20y%3D%2287%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2292%22%20y%3D%2287%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2299%22%20y%3D%2287%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%22106%22%20y%3D%2287%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2285%22%20y%3D%2294%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2292%22%20y%3D%2294%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2299%22%20y%3D%2294%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%22106%22%20y%3D%2294%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2285%22%20y%3D%22101%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2292%22%20y%3D%22101%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2299%22%20y%3D%22101%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%22106%22%20y%3D%22101%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Crect%20x%3D%2293%22%20y%3D%22121%22%20width%3D%2214%22%20height%3D%2217%22%20rx%3D%221%22%20fill%3D%22%235BBFDE%22%2F%3E%0A%20%20%3Crect%20x%3D%2295%22%20y%3D%22123%22%20width%3D%225%22%20height%3D%2213%22%20rx%3D%220.5%22%20fill%3D%22%23A8E4F7%22%20opacity%3D%220.7%22%2F%3E%0A%20%20%3Crect%20x%3D%22101%22%20y%3D%22123%22%20width%3D%225%22%20height%3D%2213%22%20rx%3D%220.5%22%20fill%3D%22%23A8E4F7%22%20opacity%3D%220.5%22%2F%3E%0A%20%20%3Crect%20x%3D%2282%22%20y%3D%2248%22%20width%3D%2236%22%20height%3D%224%22%20rx%3D%221%22%20fill%3D%22%234A5A68%22%2F%3E%0A%20%20%3Crect%20x%3D%2258%22%20y%3D%2270%22%20width%3D%2226%22%20height%3D%2268%22%20rx%3D%222%22%20fill%3D%22%236B7C8C%22%2F%3E%0A%20%20%3Crect%20x%3D%2258%22%20y%3D%2270%22%20width%3D%226%22%20height%3D%2268%22%20rx%3D%222%22%20fill%3D%22%237B8E9E%22%20opacity%3D%220.4%22%2F%3E%0A%20%20%3Cg%20fill%3D%22%23C8D6E0%22%20opacity%3D%220.6%22%3E%0A%20%20%20%20%3Crect%20x%3D%2261%22%20y%3D%2274%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2267%22%20y%3D%2274%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2273%22%20y%3D%2274%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2261%22%20y%3D%2280%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2267%22%20y%3D%2280%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2273%22%20y%3D%2280%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2261%22%20y%3D%2286%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2267%22%20y%3D%2286%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2273%22%20y%3D%2286%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2261%22%20y%3D%2292%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2267%22%20y%3D%2292%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2273%22%20y%3D%2292%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2261%22%20y%3D%2298%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2267%22%20y%3D%2298%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2273%22%20y%3D%2298%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2261%22%20y%3D%22104%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2267%22%20y%3D%22104%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2273%22%20y%3D%22104%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2261%22%20y%3D%22110%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2267%22%20y%3D%22110%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2273%22%20y%3D%22110%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Crect%20x%3D%2258%22%20y%3D%2270%22%20width%3D%2226%22%20height%3D%224%22%20rx%3D%221%22%20fill%3D%22%23566474%22%2F%3E%0A%20%20%3Crect%20x%3D%22116%22%20y%3D%2270%22%20width%3D%2226%22%20height%3D%2268%22%20rx%3D%222%22%20fill%3D%22%236B7C8C%22%2F%3E%0A%20%20%3Crect%20x%3D%22116%22%20y%3D%2270%22%20width%3D%226%22%20height%3D%2268%22%20rx%3D%222%22%20fill%3D%22%237B8E9E%22%20opacity%3D%220.4%22%2F%3E%0A%20%20%3Cg%20fill%3D%22%23C8D6E0%22%20opacity%3D%220.6%22%3E%0A%20%20%20%20%3Crect%20x%3D%22119%22%20y%3D%2274%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22125%22%20y%3D%2274%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22131%22%20y%3D%2274%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%22119%22%20y%3D%2280%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22125%22%20y%3D%2280%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22131%22%20y%3D%2280%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%22119%22%20y%3D%2286%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22125%22%20y%3D%2286%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22131%22%20y%3D%2286%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%22119%22%20y%3D%2292%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22125%22%20y%3D%2292%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22131%22%20y%3D%2292%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%22119%22%20y%3D%2298%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22125%22%20y%3D%2298%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22131%22%20y%3D%2298%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%22119%22%20y%3D%22104%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22125%22%20y%3D%22104%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22131%22%20y%3D%22104%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%22119%22%20y%3D%22110%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22125%22%20y%3D%22110%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22131%22%20y%3D%22110%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Crect%20x%3D%22116%22%20y%3D%2270%22%20width%3D%2226%22%20height%3D%224%22%20rx%3D%221%22%20fill%3D%22%23566474%22%2F%3E%0A%20%20%3Crect%20x%3D%2228%22%20y%3D%22150%22%20width%3D%22144%22%20height%3D%2222%22%20rx%3D%223%22%20fill%3D%22%235BBFDE%22%2F%3E%0A%20%20%3Cpolygon%20points%3D%2228%2C150%2028%2C172%2020%2C161%22%20fill%3D%22%233A9AB8%22%2F%3E%0A%20%20%3Cpolygon%20points%3D%22172%2C150%20172%2C172%20180%2C161%22%20fill%3D%22%233A9AB8%22%2F%3E%0A%20%20%3Ctext%20x%3D%22100%22%20y%3D%22165.5%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%20Black%2CImpact%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2217%22%20fill%3D%22%23E8C84A%22%20letter-spacing%3D%222%22%3ESUNRISE%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22100%22%20y%3D%22187%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210%22%20fill%3D%22%231A2332%22%20letter-spacing%3D%223.5%22%3EREAL%20ESTATE%3C%2Ftext%3E%0A%3C%2Fsvg%3E" alt="Logo">
+    <div class="nav-logo-text">
+      <div class="n1">SUNRISE</div>
+      <div class="n2">Real Estate</div>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="#" class="active">Home</a>
+    <a href="#listings">Properties</a>
+    <a href="#featured">Featured</a>
+    <a href="#why">Why Us</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="nav-actions">
+    <a class="btn btn-outline" href="#contact">Enquire</a>
+    <button class="btn btn-sun" onclick="openOwnerPanel()"><i class="fas fa-user-shield"></i> Owner Login</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-circle"></div>
+  <div class="hero-circle2"></div>
+  <div class="hero-content">
+    <div class="hero-badge"><i class="fas fa-sun"></i> Vadodara's Most Trusted Broker</div>
+    <h1 class="hero-title">Find Your Perfect <span>Dream Home</span> in Vadodara</h1>
+    <p class="hero-sub">Expert guidance for buying, selling & renting residential and commercial properties. Your sunrise begins with the right property.</p>
+    <div class="hero-search">
+      <div class="search-tabs">
+        <button class="stab active" onclick="setTab(this,'All')">All</button>
+        <button class="stab" onclick="setTab(this,'Sale')">Sale</button>
+        <button class="stab" onclick="setTab(this,'Rent')">Rent</button>
+        <button class="stab" onclick="setTab(this,'Lease')">Lease</button>
+      </div>
+      <div class="search-row">
+        <div class="sf">
+          <label>Location</label>
+          <select id="s-loc"><option value="">Any Location</option><option>Gotri</option><option>Sama Savli Road</option><option>Karelibag</option><option>Alkapuri</option><option>VIP Road</option><option>Khodiyarnagar</option><option>Somatalav</option><option>Waghodia Road</option><option>Bapod</option><option>Subhanpura</option><option>Ellorapark</option><option>New VIP Road</option><option>New Sama</option><option>Nizampura</option><option>Harni</option><option>Harni Sama Link Road</option><option>Vasna</option><option>Bhayli</option><option>Sevasi</option><option>Sunpharma Road</option><option>Old Padra Road</option><option>Akota</option><option>Fatehgunj</option><option>Diwalipura</option><option>New Alkapuri</option><option>Gorwa</option><option>Vasna-Bhayli Road</option><option>Tarsali</option><option>Atladara</option><option>Race Course Road</option><option>Sarabhai Campus</option><option>Ajwa Road</option><option>Makarpura</option><option>Kalali</option><option>Akshar Chowk</option><option>Laxmipura</option><option>Sayajigunj</option><option>Pratapgunj</option><option>Nava Yard</option><option>Vadsar</option><option>Warasiya</option><option>Raopura City</option><option>Vasna Road</option></select>
+        </div>
+        <div class="sf">
+          <label>Property Type</label>
+          <select id="s-type"><option value="">Any Type</option><option>Apartment</option><option>Penthouse</option><option>Duplex / Tenement</option><option>Residential Open Plot</option><option>Commercial Space</option><option>Office</option><option>Shop</option><option>PG</option><option>Agriculture Land</option><option>N.A. Project Land</option><option>Farm House</option><option>Terrace Space (Commercial)</option><option>Restaurant & Café Space</option><option>Hotel</option><option>Villa</option><option>Resi-Com Property</option><option>Commercial Open Plot</option></select>
+        </div>
+      </div>
+      <div class="search-row-bottom">
+        <div class="sf">
+          <label>Category</label>
+          <select id="s-cat"><option value="">Any Category</option><option value="rent">Rent</option><option value="lease">Lease</option><option value="sale">Sale</option><option value="rent-sale">Rent & Sale</option></select>
+        </div>
+        <div class="sf">
+          <label>Budget (₹)</label>
+          <select id="s-budget"><option>Any Budget</option><option>Upto 10L</option><option>10L–25L</option><option>25L–50L</option><option>50L–1Cr</option><option>1Cr–2Cr</option><option>2Cr+</option></select>
+        </div>
+        <button class="btn btn-sun" onclick="searchProps()" style="padding:13px 22px;font-size:.9rem;align-self:flex-end"><i class="fas fa-search"></i> Search</button>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-img-wrap">
+      <div class="float-badge">⭐ 4.9/5<small>150+ Reviews</small></div>
+      <div class="hero-img-card">
+        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=500&q=80" alt="Featured Property">
+        <div class="hero-stats-row">
+          <div class="hstat"><div class="num">500+</div><div class="lbl">Properties</div></div>
+          <div class="hstat"><div class="num">12+</div><div class="lbl">Years Exp.</div></div>
+          <div class="hstat"><div class="num">98%</div><div class="lbl">Satisfied</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LISTINGS -->
+<section id="listings" style="background:#fff">
+  <div class="flex-head">
+    <div>
+      <div class="section-label">Our Listings</div>
+      <h2 class="section-title">Explore Properties</h2>
+      <p class="section-sub">Hand-picked residential and commercial properties across Vadodara.</p>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap" id="filter-bar">
+      <button class="stab active" onclick="filterProps('all',this)">All</button>
+      <button class="stab" onclick="filterProps('sale',this)">Sale</button>
+      <button class="stab" onclick="filterProps('rent',this)">Rent</button>
+      <button class="stab" onclick="filterProps('lease',this)">Lease</button>
+      <button class="stab" onclick="filterProps('rent-sale',this)">Rent &amp; Sale</button>
+    </div>
+  </div>
+  <div class="prop-grid" id="prop-grid"></div>
+  <div style="text-align:center;margin-top:40px">
+    <button class="btn btn-outline" onclick="loadMore()"><i class="fas fa-plus"></i> Load More Properties</button>
+  </div>
+</section>
+
+<!-- FEATURED -->
+<section id="featured" style="background:var(--cream)">
+  <div class="section-label">Featured Listing</div>
+  <h2 class="section-title" style="margin-bottom:40px">Property of the Month</h2>
+  <div class="featured-wrap">
+    <div class="feat-img">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=80" alt="Featured">
+    </div>
+    <div>
+      <div class="tag-new">NEW</div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.8rem;margin:10px 0 6px">Luxurious 3BHK Apartment</h3>
+      <p style="color:var(--soft);font-size:.9rem"><i class="fas fa-map-marker-alt" style="color:var(--sky)"></i> Alkapuri, Vadodara</p>
+      <div class="feat-chips">
+        <span class="chip">3 BHK</span><span class="chip">1800 sq.ft</span><span class="chip">East Facing</span><span class="chip">Ready to Move</span>
+      </div>
+      <div class="feat-price">₹85,00,000</div>
+      <p style="color:var(--soft);font-size:.9rem;line-height:1.7">A stunning apartment with premium finishes, modular kitchen, marble flooring, and breathtaking views. Located in the heart of Alkapuri with easy access to schools, malls, and hospitals.</p>
+      <div class="feat-meta">
+        <div class="fmeta"><div class="val">3</div><div class="key">Bedrooms</div></div>
+        <div class="fmeta"><div class="val">2</div><div class="key">Bathrooms</div></div>
+        <div class="fmeta"><div class="val">2</div><div class="key">Parking</div></div>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <button class="btn btn-sun" onclick="openEnquiry('Luxurious 3BHK Apartment')"><i class="fas fa-paper-plane"></i> Send Enquiry</button>
+        <a class="btn btn-dark" href="https://wa.me/919265702938?text=Hi, I am interested in the featured 3BHK property in Alkapuri" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+  <div style="text-align:center;max-width:600px;margin:0 auto">
+    <div class="section-label">Why Sunrise</div>
+    <h2 class="section-title" style="color:#fff">Why Choose Us?</h2>
+    <p class="section-sub" style="margin:0 auto">We bring transparency, experience and personal care to every property transaction in Vadodara.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card"><div class="why-icon sun"><i class="fas fa-handshake"></i></div><h3>Trusted & Verified</h3><p>Every listing is personally verified by our team for legal clarity and fair pricing.</p></div>
+    <div class="why-card"><div class="why-icon sky"><i class="fas fa-map-marked-alt"></i></div><h3>Local Expertise</h3><p>12+ years serving Vadodara. We know every neighbourhood, price trend and opportunity.</p></div>
+    <div class="why-card"><div class="why-icon green"><i class="fas fa-rupee-sign"></i></div><h3>Best Price Guarantee</h3><p>Our network and negotiation skills ensure you always get the most competitive deal.</p></div>
+    <div class="why-card"><div class="why-icon warm"><i class="fas fa-headset"></i></div><h3>24/7 Support</h3><p>Our agents are always a call or WhatsApp away. Real estate moves fast — so do we.</p></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="flex-head" style="margin-bottom:50px">
+    <div>
+      <div class="section-label">Get in Touch</div>
+      <h2 class="section-title">Contact Us</h2>
+      <p class="section-sub">Reach out to our team for any enquiries, site visits or property guidance.</p>
+    </div>
+  </div>
+  <div class="contact-grid">
+    <div>
+      <div class="contact-info">
+        <div class="cinfo">
+          <div class="cinfo-icon"><i class="fas fa-user"></i></div>
+          <div class="cinfo-text"><h4>Yash Thakkar</h4><p>Property Consultant<br><a href="tel:+919925326900">+91 9925326900</a></p></div>
+        </div>
+        <div class="cinfo">
+          <div class="cinfo-icon"><i class="fas fa-user"></i></div>
+          <div class="cinfo-text"><h4>Samir Shaikh</h4><p>Senior Broker<br><a href="tel:+917433076111">+91 7433076111</a></p></div>
+        </div>
+        <div class="cinfo">
+          <div class="cinfo-icon" style="background:rgba(37,211,102,.1);color:#25D366"><i class="fab fa-whatsapp"></i></div>
+          <div class="cinfo-text"><h4>WhatsApp</h4><a href="https://wa.me/919265702938" target="_blank">+91 9265702938</a></div>
+        </div>
+        <div class="cinfo">
+          <div class="cinfo-icon"><i class="fas fa-envelope"></i></div>
+          <div class="cinfo-text"><h4>Email</h4><a href="mailto:sunrise.realstate.vadodara@gmail.com">sunrise.realstate.vadodara@gmail.com</a></div>
+        </div>
+        <div class="cinfo">
+          <div class="cinfo-icon"><i class="fas fa-location-dot"></i></div>
+          <div class="cinfo-text"><h4>Office Address</h4><p>GF-18 Amrapali Complex, Pani tanki Rd,<br>Karelibagh, Vadodara, Gujarat 390018</p></div>
+        </div>
+      </div>
+      <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn btn-sun" href="tel:+919925326900"><i class="fas fa-phone"></i> Call Now</a>
+        <a class="btn btn-dark" href="https://wa.me/919265702938?text=Hello, I found you on Sunrise Real Estate website and I need help." target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+    <div class="contact-form">
+      <h3 class="form-title">Send Enquiry</h3>
+      <form onsubmit="submitEnquiry(event)" id="enquiry-form">
+        <div class="form-grid">
+          <div class="form-group"><label>Full Name</label><input type="text" placeholder="Your name" required></div>
+          <div class="form-group"><label>Phone</label><input type="tel" placeholder="+91 XXXXX XXXXX" required></div>
+          <div class="form-group"><label>Email</label><input type="email" placeholder="your@email.com"></div>
+          <div class="form-group"><label>Looking For</label>
+            <select><option>Buy Property</option><option>Rent Property</option><option>Sell Property</option><option>Commercial</option></select>
+          </div>
+          <div class="form-group full"><label>Message</label><textarea placeholder="Tell us what you're looking for..."></textarea></div>
+        </div>
+        <button type="submit" class="btn btn-sun" style="width:100%;justify-content:center;margin-top:16px"><i class="fas fa-paper-plane"></i> Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<div id="map-section">
+  <div class="map-wrap">
+    <div class="map-overlay">
+      <h3>🏢 Sunrise Real Estate</h3>
+      <p>GF-18 Amrapali Complex, Pani tanki Rd, Karelibagh, Vadodara, Gujarat 390018</p>
+      <a href="https://maps.google.com/?q=Amrapali+Complex+Karelibagh+Vadodara" target="_blank" style="display:inline-block;margin-top:10px;color:var(--sky);font-size:.8rem;font-weight:600">📍 Open in Google Maps →</a>
+    </div>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.2!2d73.1802!3d22.3119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc5873b5a2b3b%3A0x6b2c!2sAmrapali+Complex%2C+Pani+Tanki+Rd%2C+Karelibagh%2C+Vadodara%2C+Gujarat+390018!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="n1">SUNRISE</div>
+      <div class="n2">Real Estate</div>
+      <p>Vadodara's trusted property partner since 2012. We help families and businesses find their perfect space with transparency and care.</p>
+      <div class="footer-socials">
+        <a class="fsoc" href="https://wa.me/919265702938" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a class="fsoc" href="mailto:sunrise.realstate.vadodara@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a class="fsoc" href="tel:+919925326900"><i class="fas fa-phone"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Properties</h4>
+      <a href="#listings">Buy</a><a href="#listings">Rent</a><a href="#listings">Commercial</a><a href="#listings">Plots</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="#why">About Us</a><a href="#contact">Contact</a><a href="#why">Why Sunrise</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="tel:+919925326900">+91 9925326900</a>
+      <a href="tel:+917433076111">+91 7433076111</a>
+      <a href="https://wa.me/919265702938" target="_blank">WhatsApp Us</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 Sunrise Real Estate, Vadodara. All rights reserved.</span>
+    <span>GF-18 Amrapali Complex, Karelibagh, Vadodara 390018</span>
+  </div>
+</footer>
+
+<!-- WHATSAPP FAB -->
+<a class="whatsapp-fab" href="https://wa.me/919265702938?text=Hello, I need help finding a property in Vadodara" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<button class="back-top" id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></button>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- PROPERTY MODAL -->
+<div id="prop-modal">
+  <div class="pmodal-box">
+    <div class="pmodal-header">
+      <h2 id="pmod-title">Property Details</h2>
+      <button class="owner-close" onclick="closePropModal()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="pmodal-body" id="pmod-body"></div>
+  </div>
+</div>
+
+<!-- OWNER PANEL -->
+<div id="owner-panel">
+  <div class="owner-modal">
+    <div class="owner-header">
+      <div>
+        <h2><i class="fas fa-user-shield" style="margin-right:10px;color:var(--gold)"></i>Owner Dashboard</h2>
+        <p id="owner-header-sub">Login to manage your property listings</p>
+      </div>
+      <button class="owner-close" onclick="closeOwnerPanel()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="owner-body">
+      <!-- LOGIN -->
+      <div id="login-form">
+        <div class="lf-logo">
+          <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%22100%22%20fill%3D%22%23FDFAF4%22%2F%3E%0A%20%20%3Cg%20transform%3D%22translate%28100%2C72%29%22%20stroke%3D%22%23F5A623%22%20stroke-linecap%3D%22round%22%3E%0A%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%22-38%22%20x2%3D%220%22%20y2%3D%22-54%22%20stroke-width%3D%222.8%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%2213%22%20y1%3D%22-35%22%20x2%3D%2219.5%22%20y2%3D%22-50%22%20stroke-width%3D%222.8%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%2224%22%20y1%3D%22-27%22%20x2%3D%2234%22%20y2%3D%22-38%22%20stroke-width%3D%222.8%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%2230%22%20y1%3D%22-14%22%20x2%3D%2243%22%20y2%3D%22-19%22%20stroke-width%3D%222.8%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%22-13%22%20y1%3D%22-35%22%20x2%3D%22-19.5%22%20y2%3D%22-50%22%20stroke-width%3D%222.8%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%22-24%22%20y1%3D%22-27%22%20x2%3D%22-34%22%20y2%3D%22-38%22%20stroke-width%3D%222.8%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%22-30%22%20y1%3D%22-14%22%20x2%3D%22-43%22%20y2%3D%22-19%22%20stroke-width%3D%222.8%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%227%22%20y1%3D%22-37%22%20x2%3D%2210%22%20y2%3D%22-52%22%20stroke-width%3D%221.3%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%22-7%22%20y1%3D%22-37%22%20x2%3D%22-10%22%20y2%3D%22-52%22%20stroke-width%3D%221.3%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%2219%22%20y1%3D%22-32%22%20x2%3D%2227%22%20y2%3D%22-45%22%20stroke-width%3D%221.3%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%22-19%22%20y1%3D%22-32%22%20x2%3D%22-27%22%20y2%3D%22-45%22%20stroke-width%3D%221.3%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%2228%22%20y1%3D%22-21%22%20x2%3D%2239%22%20y2%3D%22-28%22%20stroke-width%3D%221.3%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%22-28%22%20y1%3D%22-21%22%20x2%3D%22-39%22%20y2%3D%22-28%22%20stroke-width%3D%221.3%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%2232%22%20y1%3D%22-7%22%20x2%3D%2246%22%20y2%3D%22-10%22%20stroke-width%3D%221.3%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%22-32%22%20y1%3D%22-7%22%20x2%3D%22-46%22%20y2%3D%22-10%22%20stroke-width%3D%221.3%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Ccircle%20cx%3D%22100%22%20cy%3D%2272%22%20r%3D%2230%22%20fill%3D%22%23F5A623%22%2F%3E%0A%20%20%3Cpolygon%20transform%3D%22translate%2864%2C54%29%22%20points%3D%220%2C-5%201.2%2C-1.2%205%2C0%201.2%2C1.2%200%2C5%20-1.2%2C1.2%20-5%2C0%20-1.2%2C-1.2%22%20fill%3D%22%23F5A623%22%20opacity%3D%220.85%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%22100%22%20cy%3D%22140%22%20rx%3D%2258%22%20ry%3D%2213%22%20fill%3D%22%234CAF50%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%22100%22%20cy%3D%22143%22%20rx%3D%2222%22%20ry%3D%226.5%22%20fill%3D%22%2378C8E0%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%22100%22%20cy%3D%22143%22%20rx%3D%2216%22%20ry%3D%224.5%22%20fill%3D%22none%22%20stroke%3D%22%235BBFDE%22%20stroke-width%3D%220.8%22%20opacity%3D%220.6%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%22100%22%20cy%3D%22143%22%20rx%3D%2210%22%20ry%3D%222.8%22%20fill%3D%22none%22%20stroke%3D%22%235BBFDE%22%20stroke-width%3D%220.8%22%20opacity%3D%220.4%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%2274%22%20cy%3D%22134%22%20rx%3D%229%22%20ry%3D%227%22%20fill%3D%22%23388E3C%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%2269%22%20cy%3D%22136%22%20rx%3D%227%22%20ry%3D%225%22%20fill%3D%22%2343A047%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%22126%22%20cy%3D%22134%22%20rx%3D%229%22%20ry%3D%227%22%20fill%3D%22%23388E3C%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%22131%22%20cy%3D%22136%22%20rx%3D%227%22%20ry%3D%225%22%20fill%3D%22%2343A047%22%2F%3E%0A%20%20%3Crect%20x%3D%2260%22%20y%3D%22109%22%20width%3D%223%22%20height%3D%2227%22%20rx%3D%221.5%22%20fill%3D%22%235D4037%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M61.5%2C109%20Q50%2C99%2042%2C93%22%20stroke%3D%22%2333691E%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M61.5%2C109%20Q55%2C97%2052%2C89%22%20stroke%3D%22%23388E3C%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M61.5%2C109%20Q62%2C96%2064%2C89%22%20stroke%3D%22%2333691E%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M61.5%2C109%20Q68%2C99%2072%2C94%22%20stroke%3D%22%23388E3C%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M61.5%2C109%20Q66%2C101%2070%2C98%22%20stroke%3D%22%232E7D32%22%20stroke-width%3D%222%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Crect%20x%3D%22137%22%20y%3D%22109%22%20width%3D%223%22%20height%3D%2227%22%20rx%3D%221.5%22%20fill%3D%22%235D4037%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M138.5%2C109%20Q150%2C99%20158%2C93%22%20stroke%3D%22%2333691E%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M138.5%2C109%20Q145%2C97%20148%2C89%22%20stroke%3D%22%23388E3C%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M138.5%2C109%20Q138%2C96%20136%2C89%22%20stroke%3D%22%2333691E%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M138.5%2C109%20Q132%2C99%20128%2C94%22%20stroke%3D%22%23388E3C%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M138.5%2C109%20Q134%2C101%20130%2C98%22%20stroke%3D%22%232E7D32%22%20stroke-width%3D%222%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Crect%20x%3D%2282%22%20y%3D%2248%22%20width%3D%2236%22%20height%3D%2290%22%20rx%3D%222%22%20fill%3D%22%235C6B7A%22%2F%3E%0A%20%20%3Crect%20x%3D%2282%22%20y%3D%2248%22%20width%3D%228%22%20height%3D%2290%22%20rx%3D%222%22%20fill%3D%22%236B7C8C%22%20opacity%3D%220.5%22%2F%3E%0A%20%20%3Cg%20fill%3D%22%23C8D6E0%22%20opacity%3D%220.75%22%3E%0A%20%20%20%20%3Crect%20x%3D%2285%22%20y%3D%2252%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2292%22%20y%3D%2252%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2299%22%20y%3D%2252%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%22106%22%20y%3D%2252%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2285%22%20y%3D%2259%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2292%22%20y%3D%2259%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2299%22%20y%3D%2259%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%22106%22%20y%3D%2259%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2285%22%20y%3D%2266%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2292%22%20y%3D%2266%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2299%22%20y%3D%2266%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%22106%22%20y%3D%2266%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2285%22%20y%3D%2273%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2292%22%20y%3D%2273%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2299%22%20y%3D%2273%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%22106%22%20y%3D%2273%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2285%22%20y%3D%2280%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2292%22%20y%3D%2280%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2299%22%20y%3D%2280%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%22106%22%20y%3D%2280%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2285%22%20y%3D%2287%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2292%22%20y%3D%2287%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2299%22%20y%3D%2287%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%22106%22%20y%3D%2287%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2285%22%20y%3D%2294%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2292%22%20y%3D%2294%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2299%22%20y%3D%2294%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%22106%22%20y%3D%2294%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2285%22%20y%3D%22101%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2292%22%20y%3D%22101%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%2299%22%20y%3D%22101%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%3Crect%20x%3D%22106%22%20y%3D%22101%22%20width%3D%225%22%20height%3D%224%22%20rx%3D%220.5%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Crect%20x%3D%2293%22%20y%3D%22121%22%20width%3D%2214%22%20height%3D%2217%22%20rx%3D%221%22%20fill%3D%22%235BBFDE%22%2F%3E%0A%20%20%3Crect%20x%3D%2295%22%20y%3D%22123%22%20width%3D%225%22%20height%3D%2213%22%20rx%3D%220.5%22%20fill%3D%22%23A8E4F7%22%20opacity%3D%220.7%22%2F%3E%0A%20%20%3Crect%20x%3D%22101%22%20y%3D%22123%22%20width%3D%225%22%20height%3D%2213%22%20rx%3D%220.5%22%20fill%3D%22%23A8E4F7%22%20opacity%3D%220.5%22%2F%3E%0A%20%20%3Crect%20x%3D%2282%22%20y%3D%2248%22%20width%3D%2236%22%20height%3D%224%22%20rx%3D%221%22%20fill%3D%22%234A5A68%22%2F%3E%0A%20%20%3Crect%20x%3D%2258%22%20y%3D%2270%22%20width%3D%2226%22%20height%3D%2268%22%20rx%3D%222%22%20fill%3D%22%236B7C8C%22%2F%3E%0A%20%20%3Crect%20x%3D%2258%22%20y%3D%2270%22%20width%3D%226%22%20height%3D%2268%22%20rx%3D%222%22%20fill%3D%22%237B8E9E%22%20opacity%3D%220.4%22%2F%3E%0A%20%20%3Cg%20fill%3D%22%23C8D6E0%22%20opacity%3D%220.6%22%3E%0A%20%20%20%20%3Crect%20x%3D%2261%22%20y%3D%2274%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2267%22%20y%3D%2274%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2273%22%20y%3D%2274%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2261%22%20y%3D%2280%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2267%22%20y%3D%2280%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2273%22%20y%3D%2280%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2261%22%20y%3D%2286%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2267%22%20y%3D%2286%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2273%22%20y%3D%2286%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2261%22%20y%3D%2292%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2267%22%20y%3D%2292%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2273%22%20y%3D%2292%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2261%22%20y%3D%2298%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2267%22%20y%3D%2298%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2273%22%20y%3D%2298%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2261%22%20y%3D%22104%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2267%22%20y%3D%22104%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2273%22%20y%3D%22104%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2261%22%20y%3D%22110%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2267%22%20y%3D%22110%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%2273%22%20y%3D%22110%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Crect%20x%3D%2258%22%20y%3D%2270%22%20width%3D%2226%22%20height%3D%224%22%20rx%3D%221%22%20fill%3D%22%23566474%22%2F%3E%0A%20%20%3Crect%20x%3D%22116%22%20y%3D%2270%22%20width%3D%2226%22%20height%3D%2268%22%20rx%3D%222%22%20fill%3D%22%236B7C8C%22%2F%3E%0A%20%20%3Crect%20x%3D%22116%22%20y%3D%2270%22%20width%3D%226%22%20height%3D%2268%22%20rx%3D%222%22%20fill%3D%22%237B8E9E%22%20opacity%3D%220.4%22%2F%3E%0A%20%20%3Cg%20fill%3D%22%23C8D6E0%22%20opacity%3D%220.6%22%3E%0A%20%20%20%20%3Crect%20x%3D%22119%22%20y%3D%2274%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22125%22%20y%3D%2274%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22131%22%20y%3D%2274%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%22119%22%20y%3D%2280%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22125%22%20y%3D%2280%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22131%22%20y%3D%2280%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%22119%22%20y%3D%2286%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22125%22%20y%3D%2286%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22131%22%20y%3D%2286%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%22119%22%20y%3D%2292%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22125%22%20y%3D%2292%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22131%22%20y%3D%2292%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%22119%22%20y%3D%2298%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22125%22%20y%3D%2298%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22131%22%20y%3D%2298%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%22119%22%20y%3D%22104%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22125%22%20y%3D%22104%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22131%22%20y%3D%22104%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%22119%22%20y%3D%22110%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22125%22%20y%3D%22110%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%3Crect%20x%3D%22131%22%20y%3D%22110%22%20width%3D%224%22%20height%3D%223%22%20rx%3D%220.3%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Crect%20x%3D%22116%22%20y%3D%2270%22%20width%3D%2226%22%20height%3D%224%22%20rx%3D%221%22%20fill%3D%22%23566474%22%2F%3E%0A%20%20%3Crect%20x%3D%2228%22%20y%3D%22150%22%20width%3D%22144%22%20height%3D%2222%22%20rx%3D%223%22%20fill%3D%22%235BBFDE%22%2F%3E%0A%20%20%3Cpolygon%20points%3D%2228%2C150%2028%2C172%2020%2C161%22%20fill%3D%22%233A9AB8%22%2F%3E%0A%20%20%3Cpolygon%20points%3D%22172%2C150%20172%2C172%20180%2C161%22%20fill%3D%22%233A9AB8%22%2F%3E%0A%20%20%3Ctext%20x%3D%22100%22%20y%3D%22165.5%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%20Black%2CImpact%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2217%22%20fill%3D%22%23E8C84A%22%20letter-spacing%3D%222%22%3ESUNRISE%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22100%22%20y%3D%22187%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210%22%20fill%3D%22%231A2332%22%20letter-spacing%3D%223.5%22%3EREAL%20ESTATE%3C%2Ftext%3E%0A%3C%2Fsvg%3E" alt="Logo">
+        </div>
+        <h3>Owner Login</h3>
+        <p>Access your property management dashboard</p>
+        <div class="login-err" id="login-err">Invalid ID or Password. Please try again.</div>
+        <div class="form-group"><label>Owner ID</label><input type="text" id="oid" placeholder="Enter your owner ID"></div>
+        <div class="form-group"><label>Password</label><input type="password" id="opwd" placeholder="Enter your password"></div>
+        <button class="btn btn-sun" style="width:100%;justify-content:center" onclick="doLogin()"><i class="fas fa-sign-in-alt"></i> Login</button>
+      </div>
+      <!-- DASHBOARD -->
+      <div id="dashboard">
+        <div class="dash-nav">
+          <button class="dash-tab active" onclick="switchDash('overview',this)">Overview</button>
+          <button class="dash-tab" onclick="switchDash('listings',this)">Manage Listings</button>
+          <button class="dash-tab" onclick="switchDash('add',this)">Add Property</button>
+          <button class="dash-tab" onclick="switchDash('enquiries',this)" id="enq-tab">📩 Enquiries <span id="enq-badge-count" style="background:var(--sun);color:#fff;border-radius:100px;padding:1px 7px;font-size:.72rem;margin-left:4px">0</span></button>
+          <button class="dash-tab" onclick="doLogout()" style="margin-left:auto;color:#E74C3C"><i class="fas fa-sign-out-alt"></i> Logout</button>
+        </div>
+        <div class="dash-content">
+          <!-- OVERVIEW -->
+          <div class="dash-section active" id="ds-overview">
+            <h3 class="dash-title">Welcome, Yash Thakkar 👋</h3>
+            <div class="dash-grid" id="dash-stats"></div>
+            <h4 style="font-weight:700;color:var(--mid);margin-bottom:14px;font-size:.9rem">RECENT ENQUIRIES</h4>
+            <div id="recent-enq" style="display:flex;flex-direction:column;gap:10px"></div>
+          </div>
+          <!-- LISTINGS -->
+          <div class="dash-section" id="ds-listings">
+            <h3 class="dash-title">Manage Properties</h3>
+            <div class="prop-mgmt-list" id="mgmt-list"></div>
+          </div>
+          <!-- ADD -->
+          <div class="dash-section" id="ds-add">
+            <h3 class="dash-title">Add New Property</h3>
+            <div class="edit-form-wrap">
+              <div class="form-grid" id="add-form-grid">
+                <div class="form-group"><label>Property Title</label><input type="text" id="af-title" placeholder="e.g. 2BHK Apartment in Alkapuri"></div>
+                <div class="form-group"><label>Price (₹)</label><input type="text" id="af-price" placeholder="e.g. 45,00,000"></div>
+                <div class="form-group"><label>Location</label>
+                  <select id="af-loc"><option value="">Select Location</option><option>Gotri</option><option>Sama Savli Road</option><option>Karelibag</option><option>Alkapuri</option><option>VIP Road</option><option>Khodiyarnagar</option><option>Somatalav</option><option>Waghodia Road</option><option>Bapod</option><option>Subhanpura</option><option>Ellorapark</option><option>New VIP Road</option><option>New Sama</option><option>Nizampura</option><option>Harni</option><option>Harni Sama Link Road</option><option>Vasna</option><option>Bhayli</option><option>Sevasi</option><option>Sunpharma Road</option><option>Old Padra Road</option><option>Akota</option><option>Fatehgunj</option><option>Diwalipura</option><option>New Alkapuri</option><option>Gorwa</option><option>Vasna-Bhayli Road</option><option>Tarsali</option><option>Atladara</option><option>Race Course Road</option><option>Sarabhai Campus</option><option>Ajwa Road</option><option>Makarpura</option><option>Kalali</option><option>Akshar Chowk</option><option>Laxmipura</option><option>Sayajigunj</option><option>Pratapgunj</option><option>Nava Yard</option><option>Vadsar</option><option>Warasiya</option><option>Raopura City</option><option>Vasna Road</option></select>
+                </div>
+                <div class="form-group"><label>Property Type</label>
+                  <select id="af-type"><option>Apartment</option><option>Penthouse</option><option>Duplex / Tenement</option><option>Residential Open Plot</option><option>Commercial Space</option><option>Office</option><option>Shop</option><option>PG</option><option>Agriculture Land</option><option>N.A. Project Land</option><option>Farm House</option><option>Terrace Space (Commercial)</option><option>Restaurant & Café Space</option><option>Hotel</option><option>Villa</option><option>Resi-Com Property</option><option>Commercial Open Plot</option></select>
+                </div>
+                <div class="form-group"><label>Category</label>
+                  <select id="af-cat"><option value="rent">Rent</option><option value="lease">Lease</option><option value="sale">Sale</option><option value="rent-sale">Rent & Sale</option></select>
+                </div>
+                <div class="form-group"><label>Area (sq.ft)</label><input type="text" id="af-area" placeholder="e.g. 1200"></div>
+                <div class="form-group"><label>Bedrooms</label><input type="number" id="af-beds" placeholder="3" min="0"></div>
+                <div class="form-group"><label>Bathrooms</label><input type="number" id="af-baths" placeholder="2" min="0"></div>
+                <div class="form-group"><label>Availability Status</label>
+                  <select id="af-avail" onchange="toggleAvailDate('af-avail','af-avail-date')"><option>Available</option><option>Available In</option><option>Sold</option><option>Rent Out</option><option>Not Available</option></select>
+                </div>
+                <div class="form-group" id="af-avail-date" style="display:none">
+                  <label>Available From (Date)</label>
+                  <input type="date" id="af-avail-from" style="padding:12px 14px;border:2px solid var(--line);border-radius:10px;font-family:DM Sans,sans-serif;font-size:.9rem;width:100%">
+                </div>
+                <div class="form-group"><label>Furniture Type</label>
+                  <select id="af-furniture"><option>Unfurnished</option><option>Semi-Furnished</option><option>Furnished</option><option>Fully-Furnished</option></select>
+                </div>
+                <div class="form-group full"><label>Description</label><textarea id="af-desc" placeholder="Describe the property..."></textarea></div>
+                <div class="form-group full">
+                  <label>Photos</label>
+                  <div class="upload-area">
+                    <input type="file" accept="image/*" multiple onchange="handleAddPhotos(event)">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Click or drag photos here — photos appear instantly on user side</p>
+                  </div>
+                  <div class="img-preview-grid" id="af-preview"></div>
+                </div>
+              </div>
+              <button class="btn btn-sun" style="margin-top:20px" onclick="addProperty()"><i class="fas fa-plus"></i> Add Property</button>
+            </div>
+          </div>
+          <!-- ENQUIRIES -->
+          <div class="dash-section" id="ds-enquiries">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:12px">
+              <h3 class="dash-title" style="margin-bottom:0">Customer Enquiries</h3>
+              <button class="ibtn ibtn-del" onclick="clearAllEnq()" style="padding:9px 16px;font-size:.82rem"><i class="fas fa-trash"></i> Clear All</button>
+            </div>
+            <div class="enq-stat-cards" id="enq-stat-cards"></div>
+            <div class="enq-search-bar">
+              <i class="fas fa-search"></i>
+              <input type="text" id="enq-search" placeholder="Search by name, property or phone..." oninput="renderEnquiryList()">
+            </div>
+            <div class="enq-filters">
+              <button class="enq-filter-btn active" onclick="setEnqFilter('all',this)">All</button>
+              <button class="enq-filter-btn" onclick="setEnqFilter('new',this)">New</button>
+              <button class="enq-filter-btn" onclick="setEnqFilter('read',this)">Read</button>
+            </div>
+            <div id="enq-list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════════
+//  LOADER — always hides within 1.5s
+// ══════════════════════════════════════════
+function hideLoader(){
+  var l=document.getElementById('loader');
+  if(l){l.style.opacity='0';setTimeout(function(){l.style.display='none';},400);}
+}
+setTimeout(hideLoader,1500);
+window.addEventListener('load',hideLoader);
+
+// ══════════════════════════════════════════
+//  IMAGE STORAGE
+//  Images stored per-property under key "sr_img_<id>_<index>"
+//  so they survive page refresh and tab close.
+// ══════════════════════════════════════════
+function saveImg(propId, index, dataUrl){
+  try{ localStorage.setItem('sr_img_'+propId+'_'+index, dataUrl); }catch(e){
+    // localStorage full — try to clear old images first
+    clearOldImgKeys(propId);
+    try{ localStorage.setItem('sr_img_'+propId+'_'+index, dataUrl); }catch(e2){
+      console.warn('Image storage full, image will not persist across refresh.');
+    }
+  }
+}
+function loadImg(propId, index){
+  return localStorage.getItem('sr_img_'+propId+'_'+index) || null;
+}
+function deleteImgKeys(propId){
+  var keys=[];
+  for(var i=0;i<localStorage.length;i++) keys.push(localStorage.key(i));
+  keys.filter(function(k){return k.startsWith('sr_img_'+propId+'_');})
+      .forEach(function(k){localStorage.removeItem(k);});
+}
+function clearOldImgKeys(exceptId){
+  // Remove images of deleted properties to free space
+  var propIds = properties.map(function(p){return String(p.id);});
+  var keys=[];
+  for(var i=0;i<localStorage.length;i++) keys.push(localStorage.key(i));
+  keys.filter(function(k){
+    if(!k.startsWith('sr_img_')) return false;
+    var parts=k.split('_'); // sr_img_<id>_<idx>
+    var id=parts[2];
+    return id && id!==String(exceptId) && propIds.indexOf(id)===-1;
+  }).forEach(function(k){localStorage.removeItem(k);});
+}
+
+// ══════════════════════════════════════════
+//  PROPERTY STORAGE
+//  Properties saved without base64 data (just metadata + flag).
+//  Images loaded back from per-key storage on load.
+// ══════════════════════════════════════════
+function saveProps(){
+  try{
+    var slim=properties.map(function(p){
+      return {
+        id:p.id, title:p.title, price:p.price, loc:p.loc,
+        type:p.type, cat:p.cat, area:p.area, beds:p.beds, baths:p.baths,
+        desc:p.desc,
+        imgCount: p.imgs ? p.imgs.length : (p.img ? 1 : 0),
+        hasImg: !!(p.img || (p.imgs && p.imgs.length))
+      };
+    });
+    localStorage.setItem('sr_props', JSON.stringify(slim));
+    // Save each image separately
+    properties.forEach(function(p){
+      var imgs = p.imgs && p.imgs.length ? p.imgs : (p.img ? [p.img] : []);
+      imgs.forEach(function(src,i){
+        if(src && src.startsWith('data:')){
+          saveImg(p.id, i, src);
+        } else if(src && src.startsWith('http')){
+          saveImg(p.id, i, src);
+        }
+      });
+    });
+  }catch(e){ console.warn('saveProps error:',e); }
+}
+
+async function loadProps() {
+  try {
+
+    const res = await fetch('http://localhost:5000/api/properties');
+
+    const data = await res.json();
+
+    return data.properties || [];
+  } catch (err) {
+    console.error('Property load error:', err);
+    return [];
+  }
+}
+
+function saveEnq(){
+  try{ localStorage.setItem('sr_enq',JSON.stringify(enquiries)); }catch(e){}
+}
+
+// ══════════════════════════════════════════
+//  DATA
+// ══════════════════════════════════════════
+var defaultProperties=[
+  {id:101,avail:'Available',availDate:'',furniture:'Unfurnished',title:"Spacious 2BHK Apartment",price:"₹42,00,000",loc:"Karelibagh, Vadodara",type:"Apartment",cat:"buy",area:"1050",beds:2,baths:2,desc:"Beautiful apartment with modern amenities, great ventilation and prime location.",imgs:["https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=500&q=80"],img:"https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=500&q=80"},
+  {id:102,avail:'Available',availDate:'',furniture:'Unfurnished',title:"Premium 3BHK Flat",price:"₹75,00,000",loc:"Alkapuri, Vadodara",type:"Apartment",cat:"buy",area:"1600",beds:3,baths:2,desc:"Luxurious flat in prime Alkapuri location. Marble flooring, modular kitchen.",imgs:["https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=500&q=80"],img:"https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=500&q=80"},
+  {id:103,avail:'Available',availDate:'',furniture:'Unfurnished',title:"Commercial Shop Space",price:"₹18,000/mo",loc:"Manjalpur, Vadodara",type:"Shop",cat:"commercial",area:"300",beds:0,baths:1,desc:"Prime commercial space on main road. High footfall area, ideal for retail.",imgs:["https://images.unsplash.com/photo-1497366216548-37526070297c?w=500&q=80"],img:"https://images.unsplash.com/photo-1497366216548-37526070297c?w=500&q=80"},
+  {id:104,avail:'Available',availDate:'',furniture:'Unfurnished',title:"1BHK Cozy Flat for Rent",price:"₹8,500/mo",loc:"Waghodia Rd, Vadodara",type:"Apartment",cat:"rent",area:"600",beds:1,baths:1,desc:"Well-maintained flat, ideal for working professionals. Near bus stand.",imgs:["https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=500&q=80"],img:"https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=500&q=80"},
+  {id:105,avail:'Available',availDate:'',furniture:'Unfurnished',title:"Independent Bungalow",price:"₹1,25,00,000",loc:"Gotri, Vadodara",type:"Bungalow",cat:"buy",area:"2800",beds:4,baths:3,desc:"Spacious bungalow with large garden and 2-car parking. Premium locality.",imgs:["https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&q=80"],img:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&q=80"},
+  {id:106,avail:'Available',availDate:'',furniture:'Unfurnished',title:"Office Space 2nd Floor",price:"₹22,000/mo",loc:"Vasna, Vadodara",type:"Office",cat:"commercial",area:"500",beds:0,baths:2,desc:"Well-lit office space with dedicated parking and reception area.",imgs:["https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=500&q=80"],img:"https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=500&q=80"},
+];
+
+var properties=[];
+var enquiries = [];
+var currentFilter='all';
+var visibleCount=6;
+var OWNER_ID='yashthakkar', OWNER_PWD='yash1212';
+
+// ══════════════════════════════════════════
+//  HELPERS
+// ══════════════════════════════════════════
+function getMainImg(p){
+  if(p.imgs && p.imgs.length && p.imgs[0]) return p.imgs[0];
+  if(p.img && p.img !== '__local__') return p.img;
+  return '';
+}
+
+function formatPrice(price){
+  const num = Number(String(price).replace(/[^\d]/g, ''));
+  if(isNaN(num)) return price;
+  return '₹' + num.toLocaleString('en-IN');
+}
+
+function toast(msg,type){
+  type=type||'success';
+  var t=document.getElementById('toast');
+  t.innerHTML='<i class="fas fa-'+(type==='success'?'check-circle':'exclamation-circle')+'"></i> '+msg;
+  t.className='toast show '+type;
+  setTimeout(function(){t.classList.remove('show');},3200);
+}
+
+// ══════════════════════════════════════════
+//  SCROLL
+// ══════════════════════════════════════════
+window.addEventListener('scroll',function(){
+  document.getElementById('main-nav').classList.toggle('scrolled',window.scrollY>60);
+  document.getElementById('back-top').classList.toggle('show',window.scrollY>400);
+});
+
+// ══════════════════════════════════════════
+//  HERO SEARCH
+// ══════════════════════════════════════════
+function setTab(el){
+  document.querySelectorAll('.search-tabs .stab').forEach(function(b){b.classList.remove('active');});
+  el.classList.add('active');
+}
+function searchProps(){
+  document.getElementById('listings').scrollIntoView({behavior:'smooth'});
+  setTimeout(function(){toast('Scroll down to explore available properties!');},500);
+}
+
+// ══════════════════════════════════════════
+//  RENDER PROPERTY CARDS
+// ══════════════════════════════════════════
+function renderProps(){
+  var grid=document.getElementById('prop-grid');
+  if(!grid) return;
+  var list=properties.filter(function(p){return currentFilter==='all'||p.cat===currentFilter;});
+  var visible=list.slice(0,visibleCount);
+  grid.innerHTML=visible.map(propCard).join('');
+}
+
+function propCard(p){
+  var catLabels={'rent':'RENT','lease':'LEASE','sale':'FOR SALE','rent-sale':'RENT & SALE'};
+  var catColors={'rent':'background:var(--sky)','lease':'background:#8E44AD','sale':'background:var(--sun)','rent-sale':'background:linear-gradient(90deg,var(--sun),var(--sky))'};
+  var badgeLabel=catLabels[p.cat]||p.cat.toUpperCase();
+  var badgeColor=catColors[p.cat]||'background:var(--sun)';
+  var availCls={'Available':'available','Sold':'sold','Rent Out':'rent-out','Not Available':'not-available','Available In':'available-in'};
+  var availLabel=p.avail||'Available';
+  if(availLabel==='Available In'&&p.availDate) availLabel='Available: '+p.availDate;
+  var mainImg=getMainImg(p);
+  var fallback='https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=500&q=80';
+  var imgSrc=mainImg||fallback;
+  var safeTitle=p.title.replace(/'/g,"\\'");
+  return '<div class="prop-card" onclick="openPropModal(\''+p.id+'\')">'
+    +'<div class="prop-img">'
+    +'<img src="'+imgSrc+'" alt="'+p.title+'" onerror="this.src=\''+fallback+'\'">'
+    +'<span class="prop-badge" style="'+badgeColor+'">'+badgeLabel+'</span>'
+    +'<div class="prop-fav" onclick="event.stopPropagation();toggleFav(this)"><i class="far fa-heart"></i></div>'
+    +'</div><div class="prop-body">'
+    +'<div class="prop-price">'+formatPrice(p.price)+'</div>'
+    +'<div class="prop-name">'+p.title+'</div>'
+    +'<div class="prop-loc"><i class="fas fa-map-marker-alt"></i>'+p.loc+'</div>'
+    +'<div class="prop-tags">'
+    +(p.type?'<span class="prop-tag">'+p.type+'</span>':'')
+    +(p.furniture?'<span class="prop-tag">'+p.furniture+'</span>':'')
+    +'</div>'
+    +'<div class="prop-feats">'
+    +(p.beds>0?'<span class="pfeat"><i class="fas fa-bed"></i>'+p.beds+' Beds</span>':'')
+    +(p.baths>0?'<span class="pfeat"><i class="fas fa-bath"></i>'+p.baths+' Baths</span>':'')
+    +(p.area?'<span class="pfeat"><i class="fas fa-ruler-combined"></i>'+p.area+' sq.ft</span>':'')
+    +'</div>'
+    +'<span class="avail-badge '+(availCls[p.avail]||'available')+'"><i class="fas fa-circle" style="font-size:.5rem;margin-right:4px"></i>'+availLabel+'</span>'
+    +'<div class="prop-actions" style="margin-top:10px">'
+    +'<button class="btn btn-outline" onclick="event.stopPropagation();openEnquiry(\''+safeTitle+'\')">Enquire</button>'
+    +'<a class="btn btn-dark" href="https://wa.me/919265702938?text=Hi, I am interested in: '+encodeURIComponent(p.title)+'" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-whatsapp"></i></a>'
+    +'</div></div></div>';
+}
+
+function filterProps(cat,el){
+  currentFilter=cat; visibleCount=6;
+  document.querySelectorAll('#filter-bar .stab').forEach(function(b){b.classList.remove('active');});
+  el.classList.add('active');
+  renderProps();
+}
+function loadMore(){
+  var list=properties.filter(function(p){return currentFilter==='all'||p.cat===currentFilter;});
+  if(visibleCount>=list.length){toast('All properties shown!');return;}
+  visibleCount+=3; renderProps();
+}
+function toggleFav(el){
+  var ic=el.querySelector('i');
+  ic.classList.contains('far')?ic.classList.replace('far','fas'):ic.classList.replace('fas','far');
+  el.style.color=ic.classList.contains('fas')?'red':'';
+}
+
+// ══════════════════════════════════════════
+//  PROPERTY DETAIL MODAL
+// ══════════════════════════════════════════
+function openPropModal(id){
+  var p=properties.find(function(x){return x.id===id;});
+  if(!p) return;
+  var fallback='https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=700&q=80';
+  var allPhotos=(p.imgs&&p.imgs.filter(function(x){return x;}).length)?p.imgs.filter(function(x){return x;}):(p.img?[p.img]:[fallback]);
+  var safeTitle=p.title.replace(/'/g,"\\'");
+
+  var thumbsHtml='';
+  if(allPhotos.length>1){
+    thumbsHtml='<div class="pmod-thumb-strip">'
+      +allPhotos.map(function(src,i){
+        return '<div class="pmod-strip-thumb'+(i===0?' active':'')+'" onclick="switchModalPhoto(this,\''+src+'\')"><img src="'+src+'" onerror="this.src=\'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=200&q=60\'"></div>';
+      }).join('')
+      +'</div><p style="font-size:.75rem;color:var(--soft);margin-top:6px;text-align:center">'+allPhotos.length+' photos – tap to view</p>';
+  }
+
+  document.getElementById('pmod-title').textContent=p.title;
+  document.getElementById('pmod-body').innerHTML=
+    '<div class="pmod-gallery-wrap">'
+    +'<div class="pmod-main-photo">'
++'<button class="pmod-nav prev" onclick="modalPrevPhoto(event)"><i class="fas fa-chevron-left"></i></button>'
++'<img id="pmod-hero-img" src="'+allPhotos[0]+'" alt="'+p.title+'" onerror="this.src=\''+fallback+'\'">'
++'<button class="pmod-nav next" onclick="modalNextPhoto(event)"><i class="fas fa-chevron-right"></i></button>'
++'</div>'
+    +thumbsHtml+'</div>'
+    +'<div class="pmod-details">'
+    +'<div class="pmod-left">'
+    +'<div class="pmod-price">'+p.price+'</div>'
+    +'<p style="color:var(--soft);font-size:.88rem"><i class="fas fa-map-marker-alt" style="color:var(--sky)"></i> '+p.loc+'</p>'
+    +'<p style="color:var(--soft);font-size:.88rem;margin-top:10px;line-height:1.6">'+p.desc+'</p>'
+    +'<div class="pmod-feats-grid">'
+    +(p.beds>0?'<div class="pmod-feat"><i class="fas fa-bed"></i><span>'+p.beds+' Bedrooms</span></div>':'')
+    +(p.baths>0?'<div class="pmod-feat"><i class="fas fa-bath"></i><span>'+p.baths+' Bathrooms</span></div>':'')
+    +(p.area?'<div class="pmod-feat"><i class="fas fa-ruler-combined"></i><span>'+p.area+' sq.ft</span></div>':'')
+    +'<div class="pmod-feat"><i class="fas fa-home"></i><span>'+p.type+'</span></div>'
+    +'</div></div>'
+    +'<div class="pmod-enquiry"><h4>Quick Enquiry</h4>'
+    +'<div style="display:flex;flex-direction:column;gap:12px">'
+    +'<input id="qe-name" type="text" placeholder="Your Name" style="padding:10px 14px;border:2px solid var(--line);border-radius:10px;font-family:DM Sans,sans-serif">'
+    +'<input id="qe-phone" type="tel" placeholder="Phone Number" style="padding:10px 14px;border:2px solid var(--line);border-radius:10px;font-family:DM Sans,sans-serif">'
+    +'<textarea id="qe-msg" placeholder="Message..." style="padding:10px 14px;border:2px solid var(--line);border-radius:10px;font-family:DM Sans,sans-serif;min-height:80px;resize:vertical"></textarea>'
+    +'<button class="btn btn-sun" style="width:100%;justify-content:center" onclick="quickEnquiry(\''+safeTitle+'\')"><i class="fas fa-paper-plane"></i> Send Enquiry</button>'
+    +'<a class="btn btn-dark" style="justify-content:center" href="https://wa.me/919265702938?text=Hi, I am interested in: '+encodeURIComponent(p.title)+'" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>'
+    +'</div></div></div>';
+
+    window.currentModalPhotos = allPhotos;
+    window.currentModalIndex = 0;
+
+  document.getElementById('prop-modal').classList.add('open');
+}
+
+function modalNextPhoto(event){
+  if(event) event.stopPropagation();
+
+  if(!window.currentModalPhotos || !window.currentModalPhotos.length) return;
+
+  window.currentModalIndex =
+    (window.currentModalIndex + 1) % window.currentModalPhotos.length;
+
+  document.getElementById('pmod-hero-img').src =
+    window.currentModalPhotos[window.currentModalIndex];
+}
+
+function modalPrevPhoto(event){
+  if(event) event.stopPropagation();
+
+  if(!window.currentModalPhotos || !window.currentModalPhotos.length) return;
+
+  window.currentModalIndex =
+    (window.currentModalIndex - 1 + window.currentModalPhotos.length) %
+    window.currentModalPhotos.length;
+
+  document.getElementById('pmod-hero-img').src =
+    window.currentModalPhotos[window.currentModalIndex];
+}
+
+function closePropModal(){document.getElementById('prop-modal').classList.remove('open');}
+function switchModalPhoto(thumb,src){
+  document.getElementById('pmod-hero-img').src=src;
+  document.querySelectorAll('.pmod-strip-thumb').forEach(function(t){t.classList.remove('active');});
+  thumb.classList.add('active');
+}
+document.getElementById('prop-modal').addEventListener('click',function(e){
+  if(e.target===document.getElementById('prop-modal'))closePropModal();
+});
+
+// ══════════════════════════════════════════
+//  ENQUIRY LOGGING
+// ══════════════════════════════════════════
+function logEnquiry(data){
+  var entry={
+    id:Date.now(),
+    name:data.name||'—', phone:data.phone||'—', email:data.email||'—',
+    prop:data.prop||'General', message:data.message||'—',
+    source:data.source||'Website',
+    time:new Date().toLocaleString('en-IN'), status:'new'
+  };
+  enquiries.unshift(entry);
+  saveEnq(); updateEnqBadge();
+}
+
+function quickEnquiry(propTitle){
+  var name=(document.getElementById('qe-name')||{}).value||'';
+  var phone=(document.getElementById('qe-phone')||{}).value||'—';
+  var msg=(document.getElementById('qe-msg')||{}).value||'—';
+  if(!name.trim()){toast('Please enter your name.','error');return;}
+  logEnquiry({name:name,phone:phone,email:'—',prop:propTitle,message:msg,source:'Property Modal'});
+  toast('Enquiry sent! We will contact you soon.','success');
+  ['qe-name','qe-phone','qe-msg'].forEach(function(id){var el=document.getElementById(id);if(el)el.value='';});
+}
+
+function openEnquiry(title){
+  document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+  var msgArea=document.querySelector('#enquiry-form textarea');
+  if(msgArea) msgArea.value='I am interested in: '+title;
+  toast('Fill the form below to enquire.','success');
+}
+
+async function submitEnquiry(e){
+  e.preventDefault();
+
+  var form=document.getElementById('enquiry-form');
+  var inputs=form.querySelectorAll('input,select,textarea');
+
+  var name=(inputs[0]&&inputs[0].value.trim())||'';
+  var phone=(inputs[1]&&inputs[1].value.trim())||'';
+  var email=(inputs[2]&&inputs[2].value.trim())||'';
+  var looking=(inputs[3]&&inputs[3].value)||'General';
+  var message=(inputs[4]&&inputs[4].value.trim())||'';
+
+  if(!name){
+    toast('Please enter your name.','error');
+    return;
+  }
+
+  try{
+    const res = await fetch('http://localhost:5000/api/enquiries', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name,
+        phone,
+        email,
+        lookingFor: looking,
+        message,
+        source: 'Contact Form'
+      })
+    });
+
+    const data = await res.json();
+
+    if(!res.ok){
+      throw new Error(data.message || 'Failed to submit enquiry');
+    }
+
+    toast('Thank you '+name+'! We will reach out shortly.','success');
+    form.reset();
+
+  }catch(err){
+    console.error(err);
+    toast('Failed to submit enquiry. Please try again.','error');
+  }
+}
+
+// ══════════════════════════════════════════
+//  OWNER AUTH
+// ══════════════════════════════════════════
+function openOwnerPanel(){document.getElementById('owner-panel').classList.add('open');}
+function closeOwnerPanel(){document.getElementById('owner-panel').classList.remove('open');}
+document.getElementById('owner-panel').addEventListener('click',function(e){
+  if(e.target===document.getElementById('owner-panel'))closeOwnerPanel();
+});
+
+async function doLogin(){
+  var username = document.getElementById('oid').value.trim();
+  var password = document.getElementById('opwd').value.trim();
+
+  try{
+    const res = await fetch('http://localhost:5000/api/auth/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        username,
+        password
+      })
+    });
+
+    const data = await res.json();
+
+    if(!res.ok){
+      throw new Error(data.message || 'Login failed');
+    }
+
+    localStorage.setItem('token', data.token);
+
+    document.getElementById('login-form').style.display='none';
+    document.getElementById('dashboard').style.display='flex';
+    document.getElementById('owner-header-sub').textContent='Welcome back, ' + data.admin.username;
+
+    loadEnquiries().then(function(){
+    renderDashboard();
+});
+
+  }catch(err){
+    console.error(err);
+    document.getElementById('login-err').style.display='block';
+  }
+}
+
+function doLogout(){
+  localStorage.removeItem('token');
+  document.getElementById('login-form').style.display='flex';
+  document.getElementById('dashboard').style.display='none';
+  document.getElementById('oid').value='';
+  document.getElementById('opwd').value='';
+  document.getElementById('login-err').style.display='none';
+  document.getElementById('owner-header-sub').textContent='Login to manage your property listings';
+}
+document.getElementById('opwd').addEventListener('keydown',function(e){if(e.key==='Enter')doLogin();});
+
+// ══════════════════════════════════════════
+//  DASHBOARD
+// ══════════════════════════════════════════
+async function loadEnquiries() {
+  try {
+    const token = localStorage.getItem('token');
+
+    const res = await fetch('http://localhost:5000/api/enquiries', {
+      headers: {
+        Authorization: 'Bearer ' + token
+      }
+    });
+
+    const data = await res.json();
+
+    console.log("enquiry status:", res.status);
+    console.log("enquiry response:", data);
+
+    if (!res.ok) {
+      throw new Error(data.message || 'Failed to load enquiries');
+    }
+
+    enquiries = data.enquiries || [];
+
+  } catch (err) {
+  console.error("loadEnquiries error:", err);
+  }
+}
+
+function switchDash(id,el){
+  document.querySelectorAll('.dash-tab').forEach(function(b){b.classList.remove('active');});
+  document.querySelectorAll('.dash-section').forEach(function(s){s.classList.remove('active');});
+  el.classList.add('active');
+  document.getElementById('ds-'+id).classList.add('active');
+  if(id==='enquiries'){
+  loadEnquiries().then(function(){
+    renderEnquiryList();
+  });
+}
+}
+
+function renderDashboard(){
+  document.getElementById('dash-stats').innerHTML=
+    '<div class="stat-card"><div class="stat-num">'+properties.length+'</div><div class="stat-lbl">Total Listings</div></div>'
+    +'<div class="stat-card sky"><div class="stat-num">'+properties.filter(function(p){return p.cat==='buy';}).length+'</div><div class="stat-lbl">For Sale</div></div>'
+    +'<div class="stat-card green"><div class="stat-num">'+properties.filter(function(p){return p.cat==='rent';}).length+'</div><div class="stat-lbl">For Rent</div></div>'
+    +'<div class="stat-card" style="border-left-color:var(--mid)"><div class="stat-num">'+enquiries.length+'</div><div class="stat-lbl">Enquiries</div></div>';
+
+  var eq=enquiries.slice(0,5);
+  document.getElementById('recent-enq').innerHTML=eq.length
+    ?eq.map(function(e){
+      return '<div style="background:var(--cream);padding:12px 16px;border-radius:12px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">'
+        +'<div><strong style="font-size:.88rem">'+e.name+'</strong>'
+        +' <span style="color:var(--soft);font-size:.8rem">— '+e.prop+'</span>'
+        +(e.phone&&e.phone!=='—'?' <span style="color:var(--soft);font-size:.8rem">· '+e.phone+'</span>':'')
+        +'</div><span style="font-size:.75rem;color:var(--soft)">'+e.time+'</span></div>';
+    }).join('')
+    :'<p style="color:var(--soft);font-size:.85rem">No enquiries yet.</p>';
+
+  renderMgmtList();
+  updateEnqBadge();
+}
+
+// ══════════════════════════════════════════
+//  MANAGE LISTINGS
+// ══════════════════════════════════════════
+function buildPhotoGalleryHTML(p){
+  var imgs=p.imgs&&p.imgs.filter(function(x){return x;}).length
+    ?p.imgs.filter(function(x){return x;})
+    :(p.img&&p.img!=='__local__'&&p.img?[p.img]:[]);
+  var html='<div class="photo-gallery-grid">';
+  imgs.forEach(function(src,i){
+    html+='<div class="photo-thumb-item">'
+      +'<img src="'+src+'" onerror="this.src=\'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=200&q=60\'">'
+      +(i===0?'<span class="photo-thumb-main">MAIN</span>':'')
+      +'<button class="photo-thumb-del" onclick="deletePhoto(\''+p.id+'\', '+i+')" title="Remove"><i class="fas fa-times"></i></button>'
+      +'</div>';
+  });
+  html+='<label class="photo-add-btn">'
+    +'<input type="file" accept="image/*" multiple onchange="addMorePhotos(event,\''+p.id+'\')">'
+    +'<i class="fas fa-plus"></i><span>Add Photos</span></label>'
+    +'</div>'
+    +'<p style="font-size:.75rem;color:var(--soft);margin-top:8px"><i class="fas fa-info-circle"></i> First photo = main listing photo. Add unlimited photos.</p>';
+  return html;
+}
+
+function renderMgmtList(){
+  var list=document.getElementById('mgmt-list');
+  if(!list) return;
+  list.innerHTML=properties.map(function(p){
+    var thumb=getMainImg(p)||'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=100&q=60';
+    var imgCount=(p.imgs&&p.imgs.filter(function(x){return x;}).length)||(p.img?1:0);
+    return '<div class="pmgmt-row" id="mgmt-'+p.id+'">'
+      +'<img src="'+thumb+'" style="width:70px;height:55px;border-radius:10px;object-fit:cover;flex-shrink:0" onerror="this.src=\'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=100&q=60\'">'
+      +'<div class="pmgmt-info" style="flex:1"><h4>'+p.title+'</h4>'
+      +'<p>'+p.loc+' | '+p.type+' | '+p.cat.toUpperCase()+' | <span style="color:var(--sky)">'+imgCount+' photo(s)</span></p></div>'
+      +'<div class="pmgmt-price">'+p.price+'</div>'
+      +'<div class="pmgmt-actions">'
+      +'<button class="ibtn ibtn-edit" onclick="editProp(\''+p.id+'\')"><i class="fas fa-edit"></i> Edit</button>'
+      +'<button class="ibtn ibtn-del" onclick="deleteProp(\''+p.id+'\')"><i class="fas fa-trash"></i></button>'
+      +'</div></div>'
+      +'<div class="edit-form-wrap" id="ef-'+p.id+'" style="display:none">'
+      +'<h4 style="margin-bottom:16px;color:var(--mid)">Edit Property</h4>'
+      +'<div class="form-grid">'
+      +'<div class="form-group"><label>Title</label><input id="ef-title-'+p.id+'" value="'+p.title.replace(/"/g,'&quot;')+'"></div>'
+      +'<div class="form-group"><label>Price (₹)</label><input id="ef-price-'+p.id+'" value="'+p.price+'"></div>'
+      
+      +'<div class="form-group"><label>Area (sq.ft)</label><input id="ef-area-'+p.id+'" value="'+p.area+'"></div>'
+      +'<div class="form-group"><label>Bedrooms</label><input type="number" id="ef-beds-'+p.id+'" value="'+p.beds+'" min="0"></div>'
+      +'<div class="form-group"><label>Bathrooms</label><input type="number" id="ef-baths-'+p.id+'" value="'+p.baths+'" min="0"></div>'
+      +'<div class="form-group"><label>Availability Status</label><select id="ef-avail-'+p.id+'" onchange="toggleAvailDate(\'ef-avail-'+p.id+'\',\'ef-avail-date-'+p.id+'\')"><option'+(p.avail==='Available'?' selected':'')+'>Available</option><option'+(p.avail==='Available In'?' selected':'')+'>Available In</option><option'+(p.avail==='Sold'?' selected':'')+'>Sold</option><option'+(p.avail==='Rent Out'?' selected':'')+'>Rent Out</option><option'+(p.avail==='Not Available'?' selected':'')+'>Not Available</option></select></div>'
+      +'<div class="form-group" id="ef-avail-date-'+p.id+'" style="display:'+(p.avail==='Available In'?'flex':'none')+';flex-direction:column;gap:6px"><label>Available From</label><input type="date" id="ef-avail-from-'+p.id+'" value="'+(p.availDate||'')+'" style="padding:12px 14px;border:2px solid var(--line);border-radius:10px;font-family:DM Sans,sans-serif"></div>'
+      +'<div class="form-group"><label>Furniture Type</label><select id="ef-furniture-'+p.id+'"><option'+(p.furniture==='Unfurnished'?' selected':'')+'>Unfurnished</option><option'+(p.furniture==='Semi-Furnished'?' selected':'')+'>Semi-Furnished</option><option'+(p.furniture==='Furnished'?' selected':'')+'>Furnished</option><option'+(p.furniture==='Fully-Furnished'?' selected':'')+'>Fully-Furnished</option></select></div>'
+      +'<div class="form-group"><label>Location</label><select id="ef-loc-'+p.id+'"><option value="">Select Location</option><option'+(p.loc==='Gotri'?' selected':'')+'>Gotri</option><option'+(p.loc==='Sama Savli Road'?' selected':'')+'>Sama Savli Road</option><option'+(p.loc==='Karelibag'?' selected':'')+'>Karelibag</option><option'+(p.loc==='Alkapuri'?' selected':'')+'>Alkapuri</option><option'+(p.loc==='VIP Road'?' selected':'')+'>VIP Road</option><option'+(p.loc==='Khodiyarnagar'?' selected':'')+'>Khodiyarnagar</option><option'+(p.loc==='Somatalav'?' selected':'')+'>Somatalav</option><option'+(p.loc==='Waghodia Road'?' selected':'')+'>Waghodia Road</option><option'+(p.loc==='Bapod'?' selected':'')+'>Bapod</option><option'+(p.loc==='Subhanpura'?' selected':'')+'>Subhanpura</option><option'+(p.loc==='Ellorapark'?' selected':'')+'>Ellorapark</option><option'+(p.loc==='New VIP Road'?' selected':'')+'>New VIP Road</option><option'+(p.loc==='New Sama'?' selected':'')+'>New Sama</option><option'+(p.loc==='Nizampura'?' selected':'')+'>Nizampura</option><option'+(p.loc==='Harni'?' selected':'')+'>Harni</option><option'+(p.loc==='Harni Sama Link Road'?' selected':'')+'>Harni Sama Link Road</option><option'+(p.loc==='Vasna'?' selected':'')+'>Vasna</option><option'+(p.loc==='Bhayli'?' selected':'')+'>Bhayli</option><option'+(p.loc==='Sevasi'?' selected':'')+'>Sevasi</option><option'+(p.loc==='Sunpharma Road'?' selected':'')+'>Sunpharma Road</option><option'+(p.loc==='Old Padra Road'?' selected':'')+'>Old Padra Road</option><option'+(p.loc==='Akota'?' selected':'')+'>Akota</option><option'+(p.loc==='Fatehgunj'?' selected':'')+'>Fatehgunj</option><option'+(p.loc==='Diwalipura'?' selected':'')+'>Diwalipura</option><option'+(p.loc==='New Alkapuri'?' selected':'')+'>New Alkapuri</option><option'+(p.loc==='Gorwa'?' selected':'')+'>Gorwa</option><option'+(p.loc==='Vasna-Bhayli Road'?' selected':'')+'>Vasna-Bhayli Road</option><option'+(p.loc==='Tarsali'?' selected':'')+'>Tarsali</option><option'+(p.loc==='Atladara'?' selected':'')+'>Atladara</option><option'+(p.loc==='Race Course Road'?' selected':'')+'>Race Course Road</option><option'+(p.loc==='Sarabhai Campus'?' selected':'')+'>Sarabhai Campus</option><option'+(p.loc==='Ajwa Road'?' selected':'')+'>Ajwa Road</option><option'+(p.loc==='Makarpura'?' selected':'')+'>Makarpura</option><option'+(p.loc==='Kalali'?' selected':'')+'>Kalali</option><option'+(p.loc==='Akshar Chowk'?' selected':'')+'>Akshar Chowk</option><option'+(p.loc==='Laxmipura'?' selected':'')+'>Laxmipura</option><option'+(p.loc==='Sayajigunj'?' selected':'')+'>Sayajigunj</option><option'+(p.loc==='Pratapgunj'?' selected':'')+'>Pratapgunj</option><option'+(p.loc==='Nava Yard'?' selected':'')+'>Nava Yard</option><option'+(p.loc==='Vadsar'?' selected':'')+'>Vadsar</option><option'+(p.loc==='Warasiya'?' selected':'')+'>Warasiya</option><option'+(p.loc==='Raopura City'?' selected':'')+'>Raopura City</option><option'+(p.loc==='Vasna Road'?' selected':'')+'>Vasna Road</option></select></div>'
+      +'<div class="form-group full"><label>Description</label><textarea id="ef-desc-'+p.id+'">'+p.desc+'</textarea></div>'
+      +'<div class="form-group full">'
+      +'<label>Photos <span style="color:var(--soft);font-weight:400">(unlimited — first = main card photo)</span></label>'
+      +'<div class="photo-gallery-wrap" id="ef-photogallery-'+p.id+'">'+buildPhotoGalleryHTML(p)+'</div>'
+      +'</div></div>'
+      +'<div style="display:flex;gap:10px;margin-top:16px">'
+      +'<button class="btn btn-sun" onclick="saveProp(\''+p.id+'\')"><i class="fas fa-save"></i> Save Changes</button>'
+      +'<button class="btn btn-outline" onclick="cancelEdit(\''+p.id+'\')">Cancel</button>'
+      +'</div></div>';
+  }).join('');
+}
+
+function editProp(id){
+  document.querySelectorAll('.edit-form-wrap').forEach(function(el){el.style.display='none';});
+  var ef=document.getElementById('ef-'+id);
+  if(ef){ef.style.display='block';ef.scrollIntoView({behavior:'smooth',block:'nearest'});}
+}
+function cancelEdit(id){var ef=document.getElementById('ef-'+id);if(ef)ef.style.display='none';}
+
+async function saveProp(id){
+  var p=properties.find(function(x){return x.id===id;});if(!p)return;
+  p.title=document.getElementById('ef-title-'+id).value;
+  p.price=document.getElementById('ef-price-'+id).value;
+  var locEl=document.getElementById('ef-loc-'+id);
+  if(locEl) p.loc=locEl.value||locEl.options[locEl.selectedIndex].text;
+  p.area=document.getElementById('ef-area-'+id).value;
+  p.beds=parseInt(document.getElementById('ef-beds-'+id).value)||0;
+  p.baths=parseInt(document.getElementById('ef-baths-'+id).value)||0;
+  p.desc=document.getElementById('ef-desc-'+id).value;
+  var availSel=document.getElementById('ef-avail-'+id);
+  if(availSel) p.avail=availSel.value;
+  if(p.avail==='Available In'){var df=document.getElementById('ef-avail-from-'+id);p.availDate=df?df.value:'';}
+  else p.availDate='';
+  var furnSel=document.getElementById('ef-furniture-'+id);
+  if(furnSel) p.furniture=furnSel.value;
+  const res = await fetch(`http://localhost:5000/api/properties/${id}`, {
+  method: 'PUT',
+  headers: {
+    'Content-Type': 'application/json',
+    Authorization: 'Bearer ' + localStorage.getItem('token')
+  },
+  body: JSON.stringify(p)
+});
+
+const data = await res.json();
+
+console.log(data);
+
+renderProps();
+renderMgmtList();
+renderDashboard();
+toast('Property saved and live for users!','success');
+}
+
+async function deleteProp(id){
+  if(!confirm('Delete this property permanently?')) return;
+  const res = await fetch(`http://localhost:5000/api/properties/${id}`, {
+  method: 'DELETE',
+  headers: {
+    Authorization: 'Bearer ' + localStorage.getItem('token')
+  }
+});
+
+const data = await res.json();
+
+console.log(data);
+
+properties = properties.filter(function(p){ return p.id !== id; });
+
+renderProps();
+renderMgmtList();
+renderDashboard();
+
+toast('Property deleted.','success');
+}
+
+// ══════════════════════════════════════════
+//  PHOTO UPLOAD — THE REAL FIX
+//  FileReader reads the ACTUAL file chosen by user.
+//  Result is a data: URL = the real image bytes.
+//  Stored directly in localStorage per key.
+//  No placeholders, no sessionStorage, no loss on refresh.
+// ══════════════════════════════════════════
+function readFilesAsDataURLs(files, callback){
+  var results=[];
+  var remaining=files.length;
+  if(!remaining){ callback([]); return; }
+  files.forEach(function(file,i){
+    var reader=new FileReader();
+    reader.onload=function(e){
+      results[i]=e.target.result; // actual image data URL from YOUR file
+      remaining--;
+      if(remaining===0) callback(results);
+    };
+    reader.onerror=function(){
+      results[i]=''; remaining--;
+      if(remaining===0) callback(results.filter(function(x){return x;}));
+    };
+    reader.readAsDataURL(file); // reads the file you chose
+  });
+}
+
+async function addMorePhotos(event, id){
+
+  console.log("addMorePhotos fired", id);
+  
+  var files=Array.from(event.target.files);
+  console.log("files", files);
+  if(!files.length) return;
+
+  const fd = new FormData();
+
+files.forEach(file => {
+  fd.append('images', file);
+});
+
+const uploadRes = await fetch('http://localhost:5000/api/upload', {
+  method: 'POST',
+  headers: {
+    Authorization: 'Bearer ' + localStorage.getItem('token')
+  },
+  body: fd
+});
+
+const uploadData = await uploadRes.json();
+
+console.log(uploadData);
+
+console.log("UPLOAD FINISHED");
+
+  toast('Reading photos...','success');
+  console.log("STARTING readFilesAsDataURLs");
+  readFilesAsDataURLs(files, function(dataUrls){
+  console.log("CALLBACK FIRED", dataUrls);
+    var p=properties.find(function(x){return x.id===id;});
+    if(!p) return;
+    if(!p.imgs) p.imgs=[];
+    // Merge existing non-empty images
+    var existing=p.imgs.filter(function(x){return x;});
+    if(p.img&&p.img!=='__local__'&&existing.indexOf(p.img)===-1) existing.unshift(p.img);
+    var merged=existing.concat(dataUrls.filter(function(x){return x;}));
+    p.imgs=merged;
+    p.img=merged.length?merged[0]:'';
+    saveProps();
+    renderProps();
+    // Refresh gallery in edit form
+    var wrap=document.getElementById('ef-photogallery-'+id);
+    if(wrap) wrap.innerHTML=buildPhotoGalleryHTML(p);
+    // Update thumbnail in list row
+    var thumb=document.querySelector('#mgmt-'+id+' > img');
+    if(thumb&&p.img) thumb.src=p.img;
+    toast(dataUrls.length+' photo(s) uploaded and saved!','success');
+  });
+  event.target.value='';
+}
+
+function deletePhoto(propId, photoIdx){
+  var p=properties.find(function(x){return x.id===propId;});
+  if(!p||!p.imgs) return;
+  p.imgs.splice(photoIdx,1);
+  p.imgs=p.imgs.filter(function(x){return x;});
+  p.img=p.imgs.length?p.imgs[0]:'';
+  // Re-save all remaining images under correct indices
+  deleteImgKeys(propId);
+  p.imgs.forEach(function(src,i){ saveImg(propId,i,src); });
+  saveProps(); renderProps();
+  var wrap=document.getElementById('ef-photogallery-'+propId);
+  if(wrap) wrap.innerHTML=buildPhotoGalleryHTML(p);
+  var thumb=document.querySelector('#mgmt-'+propId+' > img');
+  if(thumb) thumb.src=p.img||'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=100&q=60';
+  toast('Photo removed.','success');
+}
+
+// ══════════════════════════════════════════
+//  ADD NEW PROPERTY
+// ══════════════════════════════════════════
+var pendingAddImgs=[];
+
+function handleAddPhotos(event){
+  var files=Array.from(event.target.files);
+
+  window.pendingFiles = files;
+
+  if(!files.length) return;
+  toast('Reading '+files.length+' photo(s)...','success');
+  readFilesAsDataURLs(files, function(dataUrls){
+    pendingAddImgs=dataUrls.filter(function(x){return x;});
+    var preview=document.getElementById('af-preview');
+    if(preview){
+      preview.innerHTML=pendingAddImgs.map(function(src){
+        return '<div class="photo-thumb-item"><img src="'+src+'"><span class="photo-thumb-main" style="bottom:auto;top:4px">✓</span></div>';
+      }).join('');
+    }
+    toast(pendingAddImgs.length+' photo(s) ready. Fill details and click Add Property.','success');
+  });
+  event.target.value='';
+}
+
+function toggleAvailDate(selId, rowId){
+  var sel=document.getElementById(selId);
+  var row=document.getElementById(rowId);
+  if(!sel||!row) return;
+  row.style.display=(sel.value==='Available In')?'flex':'none';
+}
+
+async function addProperty(){
+  var title=document.getElementById('af-title').value.trim();
+  var price=document.getElementById('af-price').value.trim();
+  var loc=document.getElementById('af-loc').value.trim()||document.getElementById('af-loc').options[document.getElementById('af-loc').selectedIndex].text;
+  if(!title||!price||!loc||loc==='Select Location'){toast('Please fill Title, Price and Location.','error');return;}
+  if(!pendingAddImgs.length){toast('Please upload at least one photo.','error');return;}
+  var availEl=document.getElementById('af-avail');
+  var availStatus=availEl?availEl.value:'Available';
+  var availDate='';
+  if(availStatus==='Available In'){
+    var dateEl=document.getElementById('af-avail-from');
+    availDate=dateEl?dateEl.value:'';
+  }
+  var newId=Date.now();
+  var imgs=pendingAddImgs.slice();
+  var newProp={
+    id:newId, title:title, price:price, loc:loc,
+    type:document.getElementById('af-type').value,
+    cat:document.getElementById('af-cat').value,
+    area:document.getElementById('af-area').value||'',
+    beds:parseInt(document.getElementById('af-beds').value)||0,
+    baths:parseInt(document.getElementById('af-baths').value)||0,
+    desc:document.getElementById('af-desc').value||'',
+    avail:availStatus, availDate:availDate,
+    furniture:document.getElementById('af-furniture').value,
+    imgs:imgs, img:imgs[0]
+  };
+
+  const fd = new FormData();
+
+window.pendingFiles.forEach(file => {
+  fd.append('images', file);
+});
+
+const uploadRes = await fetch('http://localhost:5000/api/upload', {
+  method: 'POST',
+  headers: {
+    Authorization: 'Bearer ' + localStorage.getItem('token')
+  },
+  body: fd
+});
+
+const uploadData = await uploadRes.json();
+
+console.log(uploadData)
+
+const propertyRes = await fetch('http://localhost:5000/api/properties', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    Authorization: 'Bearer ' + localStorage.getItem('token')
+  },
+  body: JSON.stringify({
+    title: title,
+    price: price,
+    loc: loc,
+    type: document.getElementById('af-type').value,
+    cat: document.getElementById('af-cat').value,
+    area: document.getElementById('af-area').value || '',
+    beds: parseInt(document.getElementById('af-beds').value) || 0,
+    baths: parseInt(document.getElementById('af-baths').value) || 0,
+    desc: document.getElementById('af-desc').value || '',
+    avail: availStatus,
+    availDate: availDate,
+    furniture: document.getElementById('af-furniture').value,
+    imgs: uploadData.urls,
+    imagePublicIds: uploadData.publicIds
+  })
+});
+
+const propertyData = await propertyRes.json();
+
+console.log(propertyData);
+  
+  saveProps();
+  renderProps(); renderMgmtList(); renderDashboard();
+  ['af-title','af-price','af-loc','af-area','af-beds','af-baths','af-desc'].forEach(function(fid){
+    var el=document.getElementById(fid);if(el)el.value='';
+  });
+  var af=document.getElementById('af-avail');if(af)af.selectedIndex=0;
+  var afd=document.getElementById('af-avail-date');if(afd)afd.style.display='none';
+  var afdf=document.getElementById('af-avail-from');if(afdf)afdf.value='';
+  var aff=document.getElementById('af-furniture');if(aff)aff.selectedIndex=0;
+  pendingAddImgs=[];
+  var prev=document.getElementById('af-preview');if(prev)prev.innerHTML='';
+  toast('Property added with '+imgs.length+' photo(s)!','success');
+  switchDash('listings',document.querySelectorAll('.dash-tab')[1]);
+}
+
+// ══════════════════════════════════════════
+//  ENQUIRY DASHBOARD
+// ══════════════════════════════════════════
+var enqFilter='all';
+
+function updateEnqBadge(){
+  var newCount=enquiries.filter(function(e){return e.status==='new';}).length;
+  var badge=document.getElementById('enq-badge-count');
+  if(badge){badge.textContent=newCount;badge.style.display=newCount>0?'inline':'none';}
+}
+
+function setEnqFilter(f,el){
+  enqFilter=f;
+  document.querySelectorAll('.enq-filter-btn').forEach(function(b){b.classList.remove('active');});
+  el.classList.add('active');
+  renderEnquiryList();
+}
+
+function renderEnquiryStats(){
+  var total=enquiries.length;
+  var newC=enquiries.filter(function(e){return e.status==='new';}).length;
+  var readC=enquiries.filter(function(e){return e.status==='read';}).length;
+  var el=document.getElementById('enq-stat-cards');
+  if(el) el.innerHTML=
+    '<div class="enq-stat"><div class="es-num">'+total+'</div><div class="es-lbl">Total</div></div>'
+    +'<div class="enq-stat"><div class="es-num" style="color:var(--sun)">'+newC+'</div><div class="es-lbl">New / Unread</div></div>'
+    +'<div class="enq-stat sky"><div class="es-num">'+readC+'</div><div class="es-lbl">Read</div></div>';
+}
+
+function renderEnquiryList(){
+  renderEnquiryStats();
+  var q=((document.getElementById('enq-search')||{}).value||'').toLowerCase();
+  var list=enquiries;
+  if(enqFilter==='new') list=list.filter(function(e){return e.status==='new';});
+  if(enqFilter==='read') list=list.filter(function(e){return e.status==='read';});
+  if(q) list=list.filter(function(e){return (e.name+e.phone+e.prop+e.message+e.email).toLowerCase().indexOf(q)>-1;});
+  var el=document.getElementById('enq-list');
+  if(!el) return;
+  if(!list.length){
+    el.innerHTML='<div class="enq-empty"><i class="fas fa-inbox"></i><p>No enquiries found.</p></div>';
+    return;
+  }
+  el.innerHTML=list.map(function(e){
+    var initials=e.name.split(' ').map(function(w){return w[0]||'';}).join('').toUpperCase().slice(0,2)||'?';
+    var waNum=e.phone.replace(/[^0-9]/g,'');
+    var waLink='https://wa.me/91'+waNum+'?text=Hello+'+encodeURIComponent(e.name)+',+regarding+your+enquiry+about+'+encodeURIComponent(e.prop);
+    return '<div class="enq-card" id="enq-card-'+e.id+'">'
+      +'<div class="enq-card-header" onclick="toggleEnqCard('+e.id+')">'
+      +'<div class="enq-avatar">'+initials+'</div>'
+      +'<div class="enq-info"><h4>'+e.name+' <span style="font-weight:400;font-size:.8rem;color:var(--soft)">· '+e.source+'</span></h4>'
+      +'<p><i class="fas fa-home" style="color:var(--sky);font-size:.75rem"></i> '+e.prop+' · '+e.phone+'</p></div>'
+      +'<span class="enq-badge '+(e.status==='new'?'new':'read')+'">'+(e.status==='new'?'NEW':'READ')+'</span>'
+      +'<span class="enq-time">'+e.time+'</span>'
+      +'<i class="fas fa-chevron-down" style="color:var(--soft);font-size:.8rem;transition:.2s" id="enq-chevron-'+e.id+'"></i>'
+      +'</div>'
+      +'<div class="enq-card-body" id="enq-body-'+e.id+'">'
+      +'<div class="enq-detail-grid">'
+      +'<div class="enq-detail-item"><label>Full Name</label><span>'+e.name+'</span></div>'
+      +'<div class="enq-detail-item"><label>Phone</label><span>'+e.phone+'</span></div>'
+      +'<div class="enq-detail-item"><label>Email</label><span>'+(e.email||'—')+'</span></div>'
+      +'<div class="enq-detail-item"><label>Interest</label><span>'+e.prop+'</span></div>'
+      +'<div class="enq-detail-item"><label>Source</label><span>'+e.source+'</span></div>'
+      +'<div class="enq-detail-item"><label>Time</label><span>'+e.time+'</span></div>'
+      +'</div>'
+      +'<p style="font-size:.78rem;font-weight:700;color:var(--soft);margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px">Message</p>'
+      +'<div class="enq-msg">'+(e.message||'No message.')+'</div>'
+      +'<div class="enq-actions-row">'
+      +(e.phone&&e.phone!=='—'?'<a class="btn btn-sun" href="tel:'+e.phone+'" style="font-size:.8rem;padding:8px 16px"><i class="fas fa-phone"></i> Call</a>':'')
+      +(waNum.length>=10?'<a class="btn btn-dark" href="'+waLink+'" target="_blank" style="font-size:.8rem;padding:8px 16px"><i class="fab fa-whatsapp"></i> WhatsApp</a>':'')
+      +(e.email&&e.email!=='—'?'<a class="btn btn-outline" href="mailto:'+e.email+'" style="font-size:.8rem;padding:8px 16px"><i class="fas fa-envelope"></i> Email</a>':'')
+      +(e.status==='new'?'<button class="ibtn ibtn-edit" onclick="markEnqRead('+e.id+')" style="padding:8px 14px"><i class="fas fa-check"></i> Mark Read</button>':'')
+      +'<button class="ibtn ibtn-del" onclick="deleteEnq('+e.id+')" style="padding:8px 14px"><i class="fas fa-trash"></i> Delete</button>'
+      +'</div></div></div>';
+  }).join('');
+}
+
+function toggleEnqCard(id){
+  var body=document.getElementById('enq-body-'+id);
+  var chev=document.getElementById('enq-chevron-'+id);
+  var isOpen=body.classList.contains('open');
+  document.querySelectorAll('.enq-card-body').forEach(function(b){b.classList.remove('open');});
+  document.querySelectorAll('[id^="enq-chevron-"]').forEach(function(c){c.style.transform='';});
+  if(!isOpen){body.classList.add('open');if(chev)chev.style.transform='rotate(180deg)';markEnqRead(id,true);}
+}
+function markEnqRead(id,silent){
+  var e=enquiries.find(function(x){return x.id===id;});
+  if(e&&e.status==='new'){e.status='read';saveEnq();updateEnqBadge();}
+  if(!silent)renderEnquiryList();
+  else{var b=document.querySelector('#enq-card-'+id+' .enq-badge');if(b){b.textContent='READ';b.className='enq-badge read';}}
+}
+function deleteEnq(id){
+  enquiries=enquiries.filter(function(e){return e.id!==id;});
+  saveEnq();updateEnqBadge();renderEnquiryList();
+  toast('Enquiry deleted.','success');
+}
+function clearAllEnq(){
+  if(!enquiries.length){toast('No enquiries to clear.','error');return;}
+  if(!confirm('Delete ALL enquiries?')) return;
+  enquiries=[];saveEnq();updateEnqBadge();renderEnquiryList();
+  toast('All enquiries cleared.','success');
+}
+
+// ══════════════════════════════════════════
+//  INIT
+// ══════════════════════════════════════════
+async function init() {
+
+  properties = await loadProps();
+
+
+  if (!properties.length) {
+    properties = defaultProperties;
+  }
+
+  renderProps();
+
+
+  updateEnqBadge();
+}
+
+init();
+
+</script>
+</body>
+</html>
